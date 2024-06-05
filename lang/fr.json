@@ -1,0 +1,85 @@
+{
+  "TYPES": {
+    "Actor": {
+      "character": "Personnage",
+      "npc": "PNJ",
+      "other": "Autre"
+    },
+    "Item": {
+      "move": "Action",
+      "npcMove": "Action PNJ",
+      "equipment": "Ressource",
+      "playbook": "Mue",
+      "tag": "Étiquette"
+    }
+  },
+  "PBTA": {
+    "Equipment": "Ressources",
+    "Moves": "Actions"
+  },
+  "MONSTERHEARTS": {
+    "Links": {
+      "Title": "Monsterhearts · Liens",
+      "ShopTitle": "Lapin Marteau",
+      "ShopURL": "https://www.lapinmarteau.com/shop/",
+      "GitTitle": "Dépôt du module",
+      "GitURL": "https://github.com/YanKlInnomme/FoundryVTT-monsterhearts",
+      "DonationTitle": "Buy me a coffee",
+      "DonationURL": "https://www.buymeacoffee.com/yank"
+    },
+    "Stats": {
+      "Hot": "Sexy",
+      "Cold": "Glacial",
+      "Volatile": "Impulsif",
+      "Dark": "Ténébreux"
+    },
+    "Sexmove": {
+      "Label": "Action sexuelle"
+    },
+    "DarkestSelf": {
+      "Label": "Démon intérieur"
+    },
+    "Harm": {
+      "Label": "Dégâts",
+      "Description": "Lorsque vous atteignez 4 points de dégâts, vous pouvez choisir de 'Tromper la Mort' ou de commencer un nouveau personnage."
+    },
+    "Look": {
+      "Label": "Apparence"
+    },
+    "Eyes": {
+      "Label": "Regard"
+    },
+    "Origin": {
+      "Label": "Origine"
+    },
+    "Xp": {
+      "Label": "Expérience",
+      "Description": "Lorsque vous échouez à un jet ou lorsqu'un mouvement vous l'impose, marquez un point d'expérience. Puis lorsque vous avez rempli les cinq points d'expérience, vous pouvez choisir l'une des progressions. Une fois que vous avez choisi une progression, effacez les cinq points d'expérience et recommencez."
+    },
+    "Advancement1": {
+      "Label": "1ère progression"
+    },
+    "Advancement2": {
+      "Label": "2nd progression"
+    },
+    "Advancement3": {
+      "Label": "3ème progression"
+    },
+    "Advancement4": {
+      "Label": "4ème progression"
+    },
+    "Advancement5": {
+      "Label": "5ème progression"
+    },
+    "MoveTypes": {
+      "Moves": "Actions",
+      "PlaybookMoves": "Actions de mue",
+      "Bargains": "Pactes",
+      "Hexes": "Malédictions"
+    },
+    "EquipmentTypes": {
+      "Strings": "Ascendants",
+      "SympatheticTokens": "Fétiches"
+    }
+  }
+}

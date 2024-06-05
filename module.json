@@ -1,0 +1,60 @@
+{
+  "id": "monsterhearts",
+  "title": "Monsterhearts (PbtA)",
+  "description": "This module is an adaptation of the role-playing game Monsterhearts for Foundry VTT. It works in conjunction with Asacolips' Powered by the Apocalypse system.",
+  "version": "1.0.0",
+  "license": "LICENSE",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12.325",
+    "maximum": "13"
+  },
+  "authors": [
+    {
+      "name": "YanK",
+      "url": "yank-solutions.fr",
+      "email": "yanklinnomme@gmail.com",
+      "discord": "yanklinnomme"
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "pbta",
+        "type": "system",
+        "compatibility": {}
+      }
+    ],
+    "recommends": [
+      {
+        "id": "babele",
+        "type": "module",
+        "compatibility": {}
+      },
+      {
+        "id": "lib-wrapper",
+        "type": "module",
+        "compatibility": {}
+      }
+    ]
+  },
+  "esmodules": [
+    "monsterhearts.js"
+  ],
+  "styles": [
+    "css/monsterhearts.css"
+  ],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "fr",
+      "name": "French",
+      "path": "lang/fr.json"
+    }
+  ]
+}

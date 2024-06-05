@@ -1,0 +1,311 @@
+/* Variables Foundry VTT */
+
+:root {
+	--color-border-highlight: #af1689;
+	--color-border-highlight-alt: #af1689;
+	--color-shadow-highlight: #af1689;
+	--color-shadow-primary: #7c065f;
+	--color-text-selection: #af1689 !important;
+	--color-text-hyperlink: #7c065f;
+	--font-primary: Fontin, sans-serif;
+}
+
+/* Polices d'écriture */
+
+@font-face {
+	font-family: Fontin;
+	src: url("../fonts/Fontin_Sans_B_45b.woff2") format("woff2"), url("../fonts/Fontin_Sans_B_45b.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Fontin;
+	src: url("../fonts/Fontin_Sans_BI_45b.woff2") format("woff2"), url("../fonts/Fontin_Sans_BI_45b.woff") format("woff");
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Fontin;
+	src: url("../fonts/Fontin_Sans_I_45b.woff2") format("woff2"), url("../fonts/Fontin_Sans_I_45b.woff") format("woff");
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Fontin;
+	src: url("../fonts/Fontin_Sans_R_45b.woff2") format("woff2"), url("../fonts/Fontin_Sans_R_45b.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Fontin;
+	src: url("../fonts/Fontin_Sans_SC_45b.woff2") format("woff2"), url("../fonts/Fontin_Sans_SC_45b.woff") format("woff");
+	font-weight: 400;
+	font-style: small-caps;
+}
+
+@font-face {
+	font-family: Yataghan;
+  	src: url("../fonts/Yataghan-Regular.woff2") format("woff2"), url("../fonts/Yataghan-Regular.woff") format("woff");
+}
+
+/* Logo Monsterhearts */
+
+#logo {
+	content: url("../img/logo.webp");
+	width: 210px;
+	height: auto;
+	padding-right: 10px;
+	background: none !important;
+}
+
+/* Mise en pause */ 
+
+#pause > img {
+	content: url("../img/pause.svg");
+	height: 492px;
+	width: 374px;
+	top: calc(50% - 246px);
+	left: calc(50% - 187px);
+	background: none !important;
+}
+
+#pause {
+	font-family: Yataghan,sans-serif;
+	font-size: 40px;
+	top: 50%;
+	background: none;
+}
+
+#pause > figcaption {
+	color: #f7f3e8;
+	position: relative;
+	text-shadow:
+		0 0 15px #af1689,
+		0 0 30px #f1b1e1;
+}
+
+@keyframes heartbeat {
+	0% {
+	  transform: scale(1);
+	}
+	25% {
+	  transform: scale(1.1);
+	}
+	40% {
+	  transform: scale(1.2);
+	}
+	55% {
+	  transform: scale(1.1);
+	}
+	70% {
+	  transform: scale(1.2);
+	}
+	100% {
+	  transform: scale(1);
+	}
+  }
+  
+  .fa-spin {
+	animation: heartbeat 1.5s infinite;
+	display: inline-block;
+  }
+  
+  .fa-spin:hover {
+	animation-play-state: paused;
+  }
+  
+
+#ui-top.offset {
+	margin-left: -0px;
+}
+
+/* Variables système */
+
+* {
+	scrollbar-color:#af1689 transparent;
+	scrollbar-width:thin;
+}
+
+img {
+	border: 0px;
+	background: transparent !important;
+}
+
+.vtt .window-app .dialog-buttons .dialog-button, .vtt .window-app .dialog-button {
+    background: #af1689;
+}
+
+.vtt .sidebar-tab {
+	font-family: "Fontin",sans-serif;
+}
+
+#chat-controls .control-buttons {
+	flex: 0 0 50px;
+}
+
+.vtt #chat-log .message.whisper {
+	background: #f1d9eb;
+}
+
+.vtt .window-header {
+	background: #af1689;
+    font-family: "Fontin", sans-serif;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+}
+
+.sheet.journal-entry .journal-sidebar {
+	background: #af1689;
+}
+
+h3.nue {
+    border-top: 2px groove #f1b1e1;
+    border-bottom: 2px groove #f1b1e1;
+}
+
+footer.nue {
+    border-top: 2px groove #f1b1e1;
+}
+
+h1 {
+    border-bottom: 2px solid #f1b1e1;
+}
+
+h3 {
+    border-bottom: 1px dotted #f1b1e1;
+}
+
+.sheet.journal-entry .pages-list .directory-item {
+	border-top: none;
+	border-bottom: none;
+}
+
+.directory .directory-item {
+	border-top: none;
+}
+
+/* Fiche de personnage */
+
+.profile-img {
+	background: linear-gradient(
+        to bottom,
+        #bb0000 0%, #ff0000 16.66%, /* Rouge */
+        #ff4600 16.66%, #ff8c00 33.33%, /* Orange */
+        #ffc600 33.33%, #ffff00 50%, /* Jaune */
+        #80c000 50%, #008000 66.66%, /* Vert */
+        #004080 66.66%, #0000ff 83.33%, /* Bleu */
+        #8b00ff 83.33%, #6800bd 100% /* Violet */
+    ) !important;
+	position: relative;
+	height: 324px;
+	width: 200px;
+	border: none;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+	transition: transform 0.3s ease-in-out;
+	transform: rotate(11deg);
+	object-fit: cover;
+}
+
+.profile-img:hover {
+	transform: rotate(-5deg);
+}
+
+.pbta.sheet .cell--image {
+    background: none;
+}
+
+.item-group-label {
+	font-size: 20px;
+	font-weight: 100;
+	color: black;
+}
+
+.pbta {
+	font-family: Fontin,sans-serif;
+}
+
+.pbta.sheet .cell input[type=text] {
+	font-family: Fontin,sans-serif;
+	font-size:18px;
+}
+
+.pbta.sheet .sheet-attributes .cell--stats .stat {
+	background: none;
+	border: none;
+	flex: 1 20%;
+}
+	
+.pbta.sheet .sheet-attributes .cell--stats .stat .cell__title {
+    font-size: 1.2rem;
+	font-family: Yataghan,sans-serif;
+	color: #000000;
+    align-items: end;
+    border-bottom: 2px solid #000000;
+	transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+	
+.pbta.sheet .sheet-attributes .cell--stats .stat .cell__title:hover {
+	color: #af1689;
+    border-bottom: 2px solid #af1689;
+}
+
+.pbta.sheet .sheet-attributes .cell--stats .stat:hover {
+	background: none;
+}
+
+.fa-dice-d6::before {
+    content: "\f522";
+	color: #000000;
+}
+
+.pbta.sheet .sheet-attributes .cell--stats .stat .cell__title:hover .fa-dice-d6::before {
+    content: "\f522";
+	color: #af1689;
+}
+
+.pbta.sheet .cell__title {
+	font-family: Yataghan,sans-serif;
+	margin: 10px 0 5px 0;
+	padding: 5px 5px 0 0;
+}
+
+.pbta.sheet label, .pbta.sheet h1, .pbta.sheet h2 {
+	padding: 5px 5px 5px 0;
+}
+
+.pbta.sheet .tabs .item.active {
+	background: #af1689;
+	color: #f7f7f7;
+	transition: color 0.3s ease, background 0.3s ease;
+}
+
+.pbta.sheet .tabs .item {
+	background: #f1b1e1;
+	color: #f7f7f7;
+	transition: color 0.3s ease, background 0.3s ease;
+}
+
+.pbta.sheet .tabs .item:hover {
+	background: #d064b5;
+	color: #f7f7f7;
+}
+
+.pbta.sheet .tabs .item {
+	font-size: 1.2rem;
+}
+
+.pbta.sheet .sheet-wrapper .sheet-bottom .sheet-main .sheet-tabs.tabs {
+	max-height: 39px;
+}
+
+.pbta.sheet .tabs {
+	border-bottom: 2px solid #af1689;
+}
+
+.pbta.sheet .tabs {
+	height: 42px;
+}

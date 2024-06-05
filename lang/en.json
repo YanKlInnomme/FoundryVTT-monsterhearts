@@ -1,0 +1,74 @@
+{
+  "TYPES": {
+    "Item": {
+      "equipment": "Resource",
+      "playbook": "Skin",
+      "tag": "Tag"
+    }
+  },
+  "MONSTERHEARTS": {
+    "Links": {
+      "Title": "Monsterhearts · Links",
+      "ShopTitle": "Buried Without Ceremony",
+      "ShopURL": "https://store.buriedwithoutceremony.com/",
+      "GitTitle": "Module deposit",
+      "GitURL": "https://github.com/YanKlInnomme/FoundryVTT-monsterhearts",
+      "DonationTitle": "Buy me a coffee",
+      "DonationURL": "https://www.buymeacoffee.com/yank"
+    },
+    "Stats": {
+      "Hot": "Hot",
+      "Cold": "Cold",
+      "Volatile": "Volatile",
+      "Dark": "Dark"
+    },
+    "Sexmove": {
+      "Label": "Sexmove"
+    },
+    "DarkestSelf": {
+      "Label": "Darkest self"
+    },
+    "Harm": {
+      "Label": "Harm",
+      "Description": "When you take your fourth harm, you can choose to 'Skirting Death' or start a new character."
+    },
+    "Look": {
+      "Label": "Look"
+    },
+    "Eyes": {
+      "Label": "Eyes"
+    },
+    "Origin": {
+      "Label": "Origin"
+    },
+    "Xp": {
+      "Label": "XP",
+      "Description": "When you fail a roll or when a movement requires you to do so, score an experience point. And when you’ve filled in all five dots on the experience track, you can choose one of the advancement options. Once you’ve chosen an advancement, erase all five experience points and start anew."
+    },
+    "Advancement1": {
+      "Label": "Advancement 1"
+    },
+    "Advancement2": {
+      "Label": "Advancement 2"
+    },
+    "Advancement3": {
+      "Label": "Advancement 3"
+    },
+    "Advancement4": {
+      "Label": "Advancement 4"
+    },
+    "Advancement5": {
+      "Label": "Advancement 5"
+    },
+    "MoveTypes": {
+      "Moves": "Moves",
+      "PlaybookMoves": "Playbook moves",
+      "Bargains": "Bargains",
+      "Hexes": "Hexes"
+    },
+    "EquipmentTypes": {
+      "Strings": "Strings",
+      "SympatheticTokens": "Sympathetic tokens"
+    }
+  }
+}
