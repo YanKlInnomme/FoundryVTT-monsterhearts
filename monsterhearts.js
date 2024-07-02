@@ -8,12 +8,37 @@ Hooks.on('init', () => {
     hint: game.i18n.localize("monsterhearts.Settings.Hint"),
     requiresReload: true
   });
+});
 
-  Babele?.get()?.register({
-    module: 'monsterhearts',
-    lang: 'fr',
-    dir: 'compendium'
-  });
+Hooks.on('babele.init', () => {
+  if (game.babele) {
+    const lang = game.i18n.lang;
+    if (lang === 'fr') {
+      game.babele.register({
+        module: 'monsterhearts',
+        lang: 'fr',
+        dir: 'compendium/fr'
+      });
+      console.log('Babele activé en français.');
+    } else if (lang === 'en') {
+      game.babele.register({
+        module: 'monsterhearts',
+        lang: 'en',
+        dir: 'compendium/en'
+      });
+      console.log('Babele activated in English.');
+    } else {
+      console.log('Babele is inactive.');
+    }
+  }
+});
+
+Hooks.on("createActor", async (actor) => {
+  if (!actor.system.img || actor.system.img === "icons/svg/mystery-man.svg") {
+    await actor.update({
+      "img": "modules/monsterhearts/img/icons/cultist.svg"
+    });
+  }
 });
 
 Hooks.on("renderSettings", (app, html) => {
@@ -36,29 +61,29 @@ Hooks.on("renderSettings", (app, html) => {
   };
 
   const createButton = (text, iconClass, url) => {
-    const button = $(`<button><i class="${iconClass}"></i> ${text} <sup><i class="fa-light fa-up-right-from-square"></i></sup></button>`);
+    const button = $(`<button><i class="${iconClass}"></i> ${text}</button>`);
     button.on("click", ev => {
       ev.preventDefault();
       window.open(url, "_blank");
     });
     return button;
   };
-  
+
   const addLinkButton = (container, link) => {
     const button = createButton(link.title, link.iconClass, link.url);
     container.append(button);
   };
 
   const title = game.i18n.localize(`MONSTERHEARTS.Links.Title`);
-  const lotdSection = $(`<h2>${title}</h2>`);
+  const lotdSection = $(`<h2>${title} <i class="fa-light fa-up-right-from-square"></i></h2>`);
   html.find("#settings-game").after(lotdSection);
 
   const lotdDiv = $(`<div></div>`);
   lotdSection.after(lotdDiv);
 
-  addLinkButton(lotdDiv, links.shop);
-  addLinkButton(lotdDiv, links.git);
-  addLinkButton(lotdDiv, links.donation);
+  Object.values(links).forEach(link => {
+    addLinkButton(lotdDiv, link);
+  });
 });
 
 Hooks.once('pbtaSheetConfig', () => {
@@ -66,7 +91,7 @@ Hooks.once('pbtaSheetConfig', () => {
   const partiallabel = game.i18n.localize("PBTA.partial");
   const successlabel = game.i18n.localize("PBTA.success");
   const stats = ["Hot", "Cold", "Volatile", "Dark"];
-  const movetypes = ["Moves", "PlaybookMoves", "Bargains", "Hexes"];
+  const movetypes = ["Moves", "SkinMoves", "Bargains", "Hexes"];
   const equipmenttypes = ["Strings", "SympatheticTokens"];
   const kindoptions = ["1", "2", "3", "4", "5", "6", "7"];
 
@@ -104,8 +129,9 @@ Hooks.once('pbtaSheetConfig', () => {
     actorTypes: {
       character: {
         stats: Object.fromEntries(stats.map(stat => [stat.toLowerCase(), { label: game.i18n.localize(`MONSTERHEARTS.Stats.${stat}`), value: 0 }])),
-        attrTop: {
+        attributes: {
           sexmove: {
+            position: "Top",
             label: game.i18n.localize("MONSTERHEARTS.Sexmove.Label"),
             description: null,
             customLabel: false,
@@ -114,6 +140,7 @@ Hooks.once('pbtaSheetConfig', () => {
             value: ""
           },
           darkestSelf: {
+            position: "Top",
             label: game.i18n.localize("MONSTERHEARTS.DarkestSelf.Label"),
             description: null,
             customLabel: false,
@@ -121,9 +148,8 @@ Hooks.once('pbtaSheetConfig', () => {
             type: "LongText",
             value: ""
           },
-        },
-        attrLeft: {
           harm: {
+            position: "Left",
             label: game.i18n.localize("MONSTERHEARTS.Harm.Label"),
             description: game.i18n.localize("MONSTERHEARTS.Harm.Description"),
             customLabel: false,
@@ -134,6 +160,7 @@ Hooks.once('pbtaSheetConfig', () => {
             steps: Array(4).fill(false)
           },
           look: {
+            position: "Left",
             label: game.i18n.localize("MONSTERHEARTS.Look.Label"),
             description: null,
             customLabel: false,
@@ -142,6 +169,7 @@ Hooks.once('pbtaSheetConfig', () => {
             value: ""
           },
           eyes: {
+            position: "Left",
             label: game.i18n.localize("MONSTERHEARTS.Eyes.Label"),
             description: null,
             customLabel: false,
@@ -150,6 +178,7 @@ Hooks.once('pbtaSheetConfig', () => {
             value: ""
           },
           origin: {
+            position: "Left",
             label: game.i18n.localize("MONSTERHEARTS.Origin.Label"),
             description: null,
             customLabel: false,
@@ -158,6 +187,7 @@ Hooks.once('pbtaSheetConfig', () => {
             value: ""
           },
           xp: {
+            position: "Left",
             label: game.i18n.localize("MONSTERHEARTS.Xp.Label"),
             description: game.i18n.localize("MONSTERHEARTS.Xp.Description"),
             customLabel: false,
@@ -168,6 +198,7 @@ Hooks.once('pbtaSheetConfig', () => {
             steps: Array(5).fill(false)
           },
           advancement1: {
+            position: "Left",
             label: game.i18n.localize("MONSTERHEARTS.Advancement1.Label"),
             description: null,
             customLabel: false,
@@ -176,6 +207,7 @@ Hooks.once('pbtaSheetConfig', () => {
             value: ""
           },
           advancement2: {
+            position: "Left",
             label: game.i18n.localize("MONSTERHEARTS.Advancement2.Label"),
             description: null,
             customLabel: false,
@@ -184,6 +216,7 @@ Hooks.once('pbtaSheetConfig', () => {
             value: ""
           },
           advancement3: {
+            position: "Left",
             label: game.i18n.localize("MONSTERHEARTS.Advancement3.Label"),
             description: null,
             customLabel: false,
@@ -192,6 +225,7 @@ Hooks.once('pbtaSheetConfig', () => {
             value: ""
           },
           advancement4: {
+            position: "Left",
             label: game.i18n.localize("MONSTERHEARTS.Advancement4.Label"),
             description: null,
             customLabel: false,
@@ -200,6 +234,7 @@ Hooks.once('pbtaSheetConfig', () => {
             value: ""
           },
           advancement5: {
+            position: "Left",
             label: game.i18n.localize("MONSTERHEARTS.Advancement5.Label"),
             description: null,
             customLabel: false,
@@ -208,90 +243,19 @@ Hooks.once('pbtaSheetConfig', () => {
             value: ""
           }
         },
-
         moveTypes: Object.fromEntries(movetypes.map(type => {
-          let creationValue = true;
-          if (type.toLowerCase() === "class") {
-              creationValue = false;
-          }
-          return [type.toLowerCase(), { 
-              label: game.i18n.localize(`MONSTERHEARTS.MoveTypes.${type}`), 
-              moves: [], 
-              creation: creationValue 
+          const creationValue = type.toLowerCase() === "moves";
+          return [type.toLowerCase(), {
+            label: game.i18n.localize(`MONSTERHEARTS.MoveTypes.${type}`),
+            moves: [],
+            creation: creationValue
           }];
-       })),
-      
+        })),
         equipmentTypes: Object.fromEntries(equipmenttypes.map(type => [type.toLowerCase(), { label: game.i18n.localize(`MONSTERHEARTS.EquipmentTypes.${type}`), mouvements: [] }]))
       },
       npc: {
-        attrTop: {
-          impulse: {
-            label: game.i18n.localize("MONSTERHEARTS.Impulse.Label"),
-            description: null,
-            customLabel: false,
-            userLabel: false,
-            type: "LongText",
-            value: ""
-          },
-          stake: {
-            label: game.i18n.localize("MONSTERHEARTS.Stake.Label"),
-            description: null,
-            customLabel: false,
-            userLabel: false,
-            type: "LongText",
-            value: ""
-          },
-          connectedthreats: {
-            label: game.i18n.localize("MONSTERHEARTS.ConnectedThreats.Label"),
-            description: null,
-            customLabel: false,
-            userLabel: false,
-            type: "LongText",
-            value: ""
-          }
-        },
-        attrLeft: {
-          countdown: {
-            label: game.i18n.localize("MONSTERHEARTS.Countdown.Label"),
-            description: null,
-            customLabel: false,
-            userLabel: false,
-            type: "Resource",
-            value: 0,
-            max: 0
-          },
-          kind: {
-            label: game.i18n.localize("MONSTERHEARTS.Kind.Options.Label"),
-            description: null,
-            customLabel: false,
-            userLabel: false,
-            type: "ListOne",
-            default: 0,
-            condition: false,
-            options: Object.fromEntries(kindoptions.map(option => [option, { label: game.i18n.localize(`MONSTERHEARTS.Kind.Options.${option}`), value: false }])),
-          }
-        },
-        moveTypes: {
-          threat: {
-            label: game.i18n.localize("MONSTERHEARTS.MoveTypes.Threat"),
-            moves: []
-          }
-        },
-        equipmentTypes: Object.fromEntries(equipmenttypes.map(type => [type.toLowerCase(), { label: game.i18n.localize(`MONSTERHEARTS.EquipmentTypes.${type}`), mouvements: [] }]))
+
       }
     }
   };
-
-  Hooks.once('ready', async function() {
-    try {
-      const overrideSettings = await game.settings.get('monsterhearts', 'settings-override');
-    
-      if (!overrideSettings) {
-        await game.settings.set('pbta', 'hideRollMode', true);
-        await game.settings.set('pbta', 'hideUses', true);
-      }
-    } catch (error) {
-      console.error("Error accessing monsterhearts settings:", error);
-    }
-  });
 });

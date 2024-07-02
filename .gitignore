@@ -1,0 +1,8 @@
+# Le fichier de vérouillage de Foundry VTT
+*.lock
+
+# Les sources graphiques
+/sources
+*.afdesign
+*.psd
+*.old

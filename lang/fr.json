@@ -24,7 +24,7 @@
       "ShopURL": "https://www.lapinmarteau.com/shop/",
       "GitTitle": "Dépôt du module",
       "GitURL": "https://github.com/YanKlInnomme/FoundryVTT-monsterhearts",
-      "DonationTitle": "Buy me a coffee",
+      "DonationTitle": "Offre-moi un café",
       "DonationURL": "https://www.buymeacoffee.com/yank"
     },
     "Stats": {
@@ -73,7 +73,7 @@
     },
     "MoveTypes": {
       "Moves": "Actions",
-      "PlaybookMoves": "Actions de mue",
+      "SkinMoves": "Actions de mue",
       "Bargains": "Pactes",
       "Hexes": "Malédictions"
     },

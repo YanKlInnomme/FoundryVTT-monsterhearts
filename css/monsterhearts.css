@@ -41,13 +41,6 @@
 }
 
 @font-face {
-	font-family: Fontin;
-	src: url("../fonts/Fontin_Sans_SC_45b.woff2") format("woff2"), url("../fonts/Fontin_Sans_SC_45b.woff") format("woff");
-	font-weight: 400;
-	font-style: small-caps;
-}
-
-@font-face {
 	font-family: Yataghan;
   	src: url("../fonts/Yataghan-Regular.woff2") format("woff2"), url("../fonts/Yataghan-Regular.woff") format("woff");
 }
@@ -191,27 +184,28 @@ h3 {
 /* Fiche de personnage */
 
 .profile-img {
-	background: linear-gradient(
+/* 	background: linear-gradient(
         to bottom,
-        #bb0000 0%, #ff0000 16.66%, /* Rouge */
-        #ff4600 16.66%, #ff8c00 33.33%, /* Orange */
-        #ffc600 33.33%, #ffff00 50%, /* Jaune */
-        #80c000 50%, #008000 66.66%, /* Vert */
-        #004080 66.66%, #0000ff 83.33%, /* Bleu */
-        #8b00ff 83.33%, #6800bd 100% /* Violet */
-    ) !important;
+        #bb0000 0%, #ff0000 16.66%,
+        #ff4600 16.66%, #ff8c00 33.33%,
+        #ffc600 33.33%, #ffff00 50%,
+        #80c000 50%, #008000 66.66%,
+        #004080 66.66%, #0000ff 83.33%,
+        #8b00ff 83.33%, #6800bd 100%
+    ) !important; */
 	position: relative;
 	height: 324px;
 	width: 200px;
 	border: none;
 	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-	transition: transform 0.3s ease-in-out;
-	transform: rotate(11deg);
+    transition: transform 0.3s ease-in-out, z-index 0.3s;
+	transform: rotate(-10deg);
 	object-fit: cover;
 }
 
 .profile-img:hover {
-	transform: rotate(-5deg);
+    transform: rotate(-5deg) scale(2) translate(50px, 50px);
+    z-index: 10;
 }
 
 .pbta.sheet .cell--image {
@@ -257,13 +251,11 @@ h3 {
 	background: none;
 }
 
-.fa-dice-d6::before {
-    content: "\f522";
+.pbta.sheet .sheet-attributes .cell--stats .stat .stat-icon {
 	color: #000000;
 }
 
 .pbta.sheet .sheet-attributes .cell--stats .stat .cell__title:hover .fa-dice-d6::before {
-    content: "\f522";
 	color: #af1689;
 }
 
@@ -295,7 +287,7 @@ h3 {
 }
 
 .pbta.sheet .tabs .item {
-	font-size: 1.2rem;
+	font-size: 1rem;
 }
 
 .pbta.sheet .sheet-wrapper .sheet-bottom .sheet-main .sheet-tabs.tabs {
@@ -308,4 +300,8 @@ h3 {
 
 .pbta.sheet .tabs {
 	height: 42px;
+}
+
+.pbta.sheet .cell--moves .item-avatar .rollable {
+	background: #af1689;
 }

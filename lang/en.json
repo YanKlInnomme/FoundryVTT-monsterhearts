@@ -43,7 +43,7 @@
     },
     "Xp": {
       "Label": "XP",
-      "Description": "When you fail a roll or when a movement requires you to do so, score an experience point. And when you’ve filled in all five dots on the experience track, you can choose one of the advancement options. Once you’ve chosen an advancement, erase all five experience points and start anew."
+      "Description": "Whenever you fail a roll or when a move requires you to do so, score an experience point. And when you’ve filled in all five dots on the experience track, you can choose one of the advancement options. Once you’ve chosen an advancement, erase all five experience points and start anew."
     },
     "Advancement1": {
       "Label": "Advancement 1"
@@ -62,7 +62,7 @@
     },
     "MoveTypes": {
       "Moves": "Moves",
-      "PlaybookMoves": "Playbook moves",
+      "SkinMoves": "Skin moves",
       "Bargains": "Bargains",
       "Hexes": "Hexes"
     },

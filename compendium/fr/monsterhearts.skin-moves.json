@@ -1,0 +1,346 @@
+{
+  "label": "Actions des Mues",
+  "mapping": {
+    "name": "name",
+    "description": "system.description",
+    "partial": "system.moveResults.partial.value",
+    "success": "system.moveResults.success.value"
+  },
+  "folders": {
+    "Cerberus* Moves": "Actions des Cerbères*",
+    "Chosen* Moves": "Actions des Élu·e·s*",
+    "Disciple* Moves": "Actions des Disciples*",
+    "Fae Moves": "Actions des Fées",
+    "Ghost Moves": "Actions des Fantômes",
+    "Ghoul Moves": "Actions des Goules",
+    "Hollow Moves": "Actions des Ombres",
+    "Infernal Moves": "Actions des Âmes damnées",
+    "Mortal Moves": "Actions des Mortel·le·s",
+    "Queen Moves": "Actions des Monarques",
+    "Vampire Moves": "Actions des Vampires",
+    "Werewolf Moves": "Actions des Lycanthropes",
+    "Witch Moves": "Actions des Sorcier·ère·s"
+  },
+  "entries": {
+    "A Blank Canvas": {
+      "name": "Une page vierge",
+      "description": "<p>Quand vous agissez de façon à incarner l’une de vos Conditions et que vous l’autorisez à changer la personne que vous êtes vraiment, rayez-la et ajoutez +1 sur votre jet.</p>"
+    },
+    "And Your Enemies Closer": {
+      "name": "Connais ton ennemi",
+      "description": "<p>Quand quelqu’un vous trahit, gagnez un Ascendant sur elle ou lui.</p>"
+    },
+    "Arbiter": {
+      "name": "Arbiter",
+      "description": "<p>When you give someone a Condition, mark experience.</p>"
+    },
+    "Bark, Then Bite": {
+      "name": "Bark, Then Bite",
+      "description": "<p>When you take advantage of a Condition that you gave to someone, it adds 2 to your roll instead of 1.</p>"
+    },
+    "Better Than Nothing": {
+      "name": "Mieux que rien",
+      "description": "<p>Quand vous gagnez une Condition, gagnez également 1 point d’expérience.</p>"
+    },
+    "Beyond The Veil": {
+      "name": "Au-delà du voile",
+      "description": "<p>Pour obtenir audience auprès du roi des Fées <em>contemplez l’Abysse</em>, précisez ce que vous cherchez et faites un jet de Ténébreux.</p>",
+      "partial": "<p>Entre 7 et 9, le roi des Fées exige que vous lui rendiez un service, mais vous obtenez quand même votre réponse.</p>",
+      "success": "<p>Sur 10 ou plus, le roi des Fées vous révèle un secret sur quelqu’un. Gagnez un Ascendant. Et il vous apporte une réponse claire et vous gagnez +1 sur le prochain jet que vous ferez en rapport avec cette dernière.</p>"
+    },
+    "Blood Offerings": {
+      "name": "Blood Offerings",
+      "description": "<p>Every time you suffer Harm, the Wicked Master gains a String on you and you mark experience.</p>"
+    },
+    "Bought Loyalty": {
+      "name": "Tout le monde a un prix",
+      "description": "<p>Vous pouvez donner un Ascendant à un personnage secondaire pour l’inciter à faire ce que vous souhaitez. La ou le MC vous dira de quelle sorte de pot-de-vin, de menace ou de flatterie vous aurez besoin pour faire en sorte que ce personnage s’empresse de faire ce que vous désirez.</p>"
+    },
+    "Can’t Save Myself": {
+      "name": "Personal Jesus",
+      "description": "<p>Quand quelqu’un vous sauve de forces qui vous dépassent, il ou elle gagne 1 point d’expérience et vous gagnez un Ascendant sur lui ou elle.</p>"
+    },
+    "Cold as Ice": {
+      "name": "À vous glacer le sang",
+      "description": "<p>Quand vous <em>rembarrez</em> quelqu’un et obtenez un résultat de 7 ou plus, vous pouvez choisir une option supplémentaire dans la liste.</p>"
+    },
+    "Creep": {
+      "name": "Voyeur",
+      "description": "<p>Lorsque vous êtes témoin silencieux·se d’un moment réellement intime, comme lorsque vous regardez une autre personne dormir ou se maquiller, gagnez un Ascendant sur elle.</p>"
+    },
+    "Dark Recruiter": {
+      "name": "Rabatteuse de l’enfer",
+      "description": "<p>Quand vous menez une âme innocente à votre bienfaiteur·rice démoniaque, gagnez 1 point d’expérience.</p>"
+    },
+    "Dig Deeper": {
+      "name": "Dig Deeper",
+      "description": "<p>When you <em>Gaze Into the Abyss</em> by snooping around for dirt on someone, add 1 to your roll. On a 10 up, the owner of that character will tell you a secret, and you can choose to give them a Condition to reflect what you’ve learned.</p>"
+    },
+    "Doomed Outsider": {
+      "name": "Doomed Outsider",
+      "description": "<p>When trying to drive others away from you, or escape their care, you can take advantage of your own Conditions to add to your roll.</p>"
+    },
+    "Down the Rabbit Hole": {
+      "name": "À la poursuite du lapin blanc",
+      "description": "<p>Quand vous fourrez votre nez dans des affaires qui ne regardent pas les gens comme vous, une des personnes impliquées gagne un Ascendant sur vous, et vous gagnez 1 point d’expérience.</p>"
+    },
+    "Downward Spiral": {
+      "name": "Cercle vicieux",
+      "description": "<p>Quand vous <em>contemplez l’Abysse</em>, vous avez la possibilité de vous infliger une fois 1 dégât pour ajouter +2 sur votre jet.</p>"
+    },
+    "End of the World": {
+      "name": "End of the World",
+      "description": "<p>You have sworn fealty to a Wicked Master. Once it has accumulated six hundred sixty-six Strings, it can fully materialize in this realm, possessing immeasurable power.</p>"
+    },
+    "Ending": {
+      "name": "Le rideau tombe",
+      "description": "<p>Vous vous souvenez des circonstances de votre mort dans les moindres détails. Quand vous en parlez à quelqu’un, donnez-lui la Condition <strong>lugubre</strong> et faites un jet de Glacial pour l’<em>allumer</em>.</p>"
+    },
+    "Entrenched": {
+      "name": "Vieux couple",
+      "description": "<p>Si la somme des Ascendants que vous avez sur un autre personnage et de ceux qu’il a sur vous est de 5 ou plus, ajoutez +1 sur tous vos jets contre lui.</p>"
+    },
+    "Esprit de Corpse": {
+      "name": "Cadavre exquis",
+      "description": "<p>Quand vous <em>contemplez l’Abysse</em>, cette dernière partage sa faim avec vous. Considérez-la comme l’une des vôtres jusqu’à ce que vous l’assouvissiez. Gagnez 1 point d’expérience lorsque ce sera le cas.</p>"
+    },
+    "Excuses Are My Armour": {
+      "name": "Ses excuses sont ma protection",
+      "description": "<p>Lorsque vous choisissez d’ignorer un problème flagrant avec votre véritable amour ou la façon dont il vous traite, gagnez 1 point d’expérience.</p>"
+    },
+    "Faery Contract": {
+      "name": "Contrat féérique",
+      "description": "<p>Si votre cible rompt une promesse ou un contrat qui vous lie, gagnez un Ascendant sur elle. Quand vous dépensez un Ascendant pour lui rendre la pareille et obtenir justice à la suite d’une promesse rompue, ajoutez ces deux options à celles offertes par l’action <em></em>&#8239;:</p>\n<ul>\n<li>La cible merde quelque chose de pourtant simple au pire moment, et s’inflige 1 dégât (si c’est pertinent)&#8239;;</li>\n<li>Ajoutez +2 sur un jet vous permettant de vous venger.</li>\n</ul>"
+    },
+    "Fake": {
+      "name": "Mytho",
+      "description": "<p>Ajoutez 1 sur tous les jets que vous faites quand vous êtes en train de mentir.</p>"
+    },
+    "Final Showdown": {
+      "name": "Final Showdown",
+      "description": "<p>Spend 4 Strings on a side character to kill them. They are totally and irrevocably dead.</p>"
+    },
+    "Growing Pains": {
+      "name": "Growing Pains",
+      "description": "<p>When you fail to protect your friends, mark experience.</p>"
+    },
+    "Guide": {
+      "name": "Visite guidée",
+      "description": "<p>Vous pouvez dépenser un Ascendant pour amener une personne consentante à vous suivre au-delà du voile, jusque dans le royaume des Fées. Ce sort ne dure qu’une scène ou deux, et vous êtes ensuite renvoyés vers ce monde et sa banalité.</p>"
+    },
+    "Heightened Senses": {
+      "name": "Sens aiguisés",
+      "description": "<p>Quand vous vous fiez à votre instinct bestial pour tirer au clair une situation délicate, faites un jet de Ténébreux.</p>",
+      "partial": "<p>Entre 7 et 9, posez une question de la liste ci-dessous au ou à la MC et gagnez +1 sur votre prochain jet de dés.</p><ul>\n<li>Par où ai-je le plus de chances de m’enfuir ou de pénétrer dans cet endroit&#8239;?</li>\n<li>Pour quel·le ennemi·e suis-je la plus grande menace&#8239;?</li>\n<li>Quel est son point faible&#8239;?</li>\n<li>Quelle est la plus grande menace à mon encontre&#8239;?</li>\n<li>Qui commande ici&#8239;?</li>\n</ul>",
+      "success": "<p>Sur 10 ou plus, posez trois questions de la liste ci-dessous au ou à la MC et gagnez +1 sur votre prochain jet de dés.</p><ul>\n<li>Par où ai-je le plus de chances de m’enfuir ou de pénétrer dans cet endroit&#8239;?</li>\n<li>Pour quel·le ennemi·e suis-je la plus grande menace&#8239;?</li>\n<li>Quel est son point faible&#8239;?</li>\n<li>Quelle est la plus grande menace à mon encontre&#8239;?</li>\n<li>Qui commande ici&#8239;?</li>\n</ul>"
+    },
+    "Helpful Spirit": {
+      "name": "Esprit serviable",
+      "description": "<p>Lorsque vous aidez quelqu’un à se débarrasser d’une Condition, gagnez un Ascendant sur elle ou lui.</p>"
+    },
+    "Hex-Casting": {
+      "name": "Sorcellerie",
+      "description": "<p>Vous pouvez lancer des malédictions. Choisissez-en deux que vous connaissez. Un tel maléfice nécessite de dépenser un fétiche au cours d’un rituel occulte, ou de croiser le regard de sa victime et de psalmodier dans une langue étrange. Faites ensuite un jet de Ténébreux.</p>",
+      "partial": "<p>Entre 7 et 9, le sortilège fonctionne, mais vous devez choisir une des options suivantes&#8239;:</p><ul>\n<li>L’incantation vous inflige 1 dégât&#8239;;</li>\n<li>La malédiction a d’étranges effets secondaires&#8239;;</li>\n<li>Vous succombez à votre démon intérieur.</li>\n</ul>",
+      "success": "<p>Sur 10 ou plus, le sortilège fonctionne et peut aisément être dissipé.</p>"
+    },
+    "Hot Take": {
+      "name": "Hot Take",
+      "description": "<p>When you discover an injustice that has long been hidden or covered up, add 1 to your rolls to bring it to light and to justice as immediately as possible.</p>"
+    },
+    "Howl at the Moon": {
+      "name": "Hurler à la lune",
+      "description": "<p>Quand vous êtes baigné·e par la lumière de la lune, considérez que vous avez 3 en Ténébreux.</p>"
+    },
+    "Hypnotic": {
+      "name": "Hypnotique",
+      "description": "<p>Vous pouvez hypnotiser les personnes qui n’ont pas d’ascendant sur vous. Faites un jet de Sexy.</p>",
+      "partial": "<p>Entre 7 et 9, vous l’hypnotisez, mais vous devez choisir une des options suivantes&#8239;:</p><ul>\n<li>Elle comprend exactement ce que vous lui avez fait&#8239;;</li>\n<li>Elle foire ce que vous lui avez demandé&#8239;;</li>\n<li>Sa santé mentale en prend un coup.</li>\n</ul>",
+      "success": "<p>Sur 10 ou plus, votre cible fait exactement ce que vous souhaitez et ne se rend pas compte que quelque chose cloche.</p>"
+    },
+    "Idols": {
+      "name": "Idols",
+      "description": "<p>You create idols to your Wicked Master, in the form of (circle 1): cloth dolls, carved sigils, statues, videos, ritual performances, ceremonial fires, dark poems.</p>\n<p>Each idol counts as a String on you, held by the Wicked Master unless someone else seizes control of it or destroys it.</p>"
+    },
+    "Incantations": {
+      "name": "Incantations",
+      "description": "<p>When you <em>Gaze Into the Abyss</em> to entreat the Wicked Master, it gains a String on you. On a 10 up, the Wicked Master reveals the next stage of its plan, and you take an ongoing 1 Forward to all rolls made to enact this bidding.</p>"
+    },
+    "Inescapable": {
+      "name": "Magnétisme",
+      "description": "<p>Vous pouvez dépenser un Ascendant sur quelqu’un pour exiger qu’il ou elle reste en votre présence. Si la personne s’éloigne malgré tout, gagnez 2 Ascendants sur elle.</p>"
+    },
+    "Invited": {
+      "name": "Invitée",
+      "description": "<p>Vous ne pouvez pas entrer dans une maison sans y avoir été invité·e. Quand quelqu’un vous invite à entrer, gagnez un Ascendant sur elle ou lui.</p>"
+    },
+    "Light the Way": {
+      "name": "Light the Way",
+      "description": "<p>Whenever your friends follow your commands or your lead, they add 1 to their rolls.</p>"
+    },
+    "Limitless": {
+      "name": "Éthérée",
+      "description": "<p>Vous pouvez voler et traverser les murs.</p>"
+    },
+    "Loyal": {
+      "name": "Loyal",
+      "description": "<p>Whoever currently has the most Strings on you is your Master. When you take action to protect or help your Master, add 1 to your roll and they gain a String on you.</p>\n<p>When you become your Darkest Self, your current Master loses all Strings on you.</p>"
+    },
+    "Lure": {
+      "name": "Appâter",
+      "description": "<p>À chaque fois que quelqu’un vous fait une promesse, il ou elle gagne 1 point d’expérience. À chaque fois que l’on trahit une promesse que l’on vous a faite, vous gagnez 1 point d’expérience.</p>"
+    },
+    "Many Bodies": {
+      "name": "Esprit de corps",
+      "description": "<p>Quand vous promettez un des membres de votre clique à quelqu’un, ajoutez +2 sur votre jet pour l’<em>allumer</em>. Quand l’un d’entre eux couche avec quelqu’un, cet événement déclenche votre action sexuelle.</p>"
+    },
+    "Marked for the Hunt": {
+      "name": "Chasse gardée",
+      "description": "<p>Vous établissez un lien surnaturel avec les personnes dont vous vous nourrissez. Désormais, à chaque fois que vous <em>contemplez l’Abysse</em> pour en apprendre davantage sur leurs allées et venues ou sur leur bien-être, considérez que vous avez 3 en Ténébreux.</p>"
+    },
+    "Mercy": {
+      "name": "Mercy",
+      "description": "<p>When you decide to spare someone you have reason to kill, take a String on them.</p>"
+    },
+    "Mess With Me,  Mess With Him": {
+      "name": "Si tu me cherches, tu le trouves",
+      "description": "<p>Quand vous utilisez le nom de votre véritable amour pour menacer quelqu’un, ajoutez +2 sur vos jets de <em>Rembarrer</em> ou de <em>Garder votre sang-froid</em>. Votre véritable amour gagne un Ascendant sur vous.</p>"
+    },
+    "Metamorphosis": {
+      "name": "Métamorphose",
+      "description": "<p>Quand vous <em>contemplez l’Abysse</em>, sur un 7 ou plus, elle vous montre également ce que vous devez devenir. Vous pouvez alors échanger deux de vos caractéristiques de manière permanente.</p>"
+    },
+    "Primal Dominance": {
+      "name": "Domination primale",
+      "description": "<p>Quand vous blessez quelqu’un, gagnez un Ascendant sur elle ou lui.</p>"
+    },
+    "Projected Blame": {
+      "name": "Culpabiliser",
+      "description": "<p>Tant que vous avez la Condition <strong>traumatisé·e</strong>, vous pouvez considérer que tous les autres ont la Condition <strong>responsable de ma mort</strong>.</p>"
+    },
+    "Sanctuary": {
+      "name": "Sanctuaire",
+      "description": "<p>Vous avez un lieu secret dans lequel vous pratiquez la sorcellerie. Ajoutez +1 sur tous les jets que vous faites dans cet endroit.</p>"
+    },
+    "Satiety": {
+      "name": "Satiété",
+      "description": "<p>Quand vous assouvissez une faim, choisissez une des options suivantes&#8239;:</p>\n<ul>\n<li>Soignez 1 dégât&#8239;;</li>\n<li>Gagnez 1 point d’expérience&#8239;;</li>\n<li>Gagnez +1 sur votre prochain jet de dés.</li>\n</ul>"
+    },
+    "Scent of Blood": {
+      "name": "Odeur de sang",
+      "description": "<p>Ajoutez +1 sur tous les jets faits contre celles et ceux qui ont déjà été blessé·e·s au cours de cette scène.</p>"
+    },
+    "Secret Mission": {
+      "name": "Secret Mission",
+      "description": "<p>Whenever you lie to someone about your true motives, and they foolishly believe you, gain a String on them.</p>"
+    },
+    "Short Rest for the Wicked": {
+      "name": "Les méchant·e·s ne meurent jamais",
+      "description": "<p>Quand vous mourez, attendez un peu. Quelques heures plus tard, vous vous relevez complètement guérie.</p>"
+    },
+    "Soul Debt": {
+      "name": "Âme en sursis",
+      "description": "<p>Vous avez une dette envers une puissance obscure. C’est votre bienfaiteur·rice démoniaque. Donnez-lui un nom et choisissez deux pactes que vous avez conclus avec elle ou lui. Cette puissance peut gagner des Ascendants. Dès qu’elle en a cinq sur vous, vous succombez à votre démon intérieur.</p>"
+    },
+    "Soul Recruiter": {
+      "name": "Soul Recruiter",
+      "description": "<p>When you bring an innocent soul to the Wicked Master, mark experience.</p>"
+    },
+    "Spirit Armour": {
+      "name": "Protection mystique",
+      "description": "<p>Quand vous êtes baigné·e par la lumière de la lune, réduisez de 1 tous les dégâts que vous subissez et ajoutez +2 sur tous vos jets pour <em>garder votre sang-froid</em>.</p>"
+    },
+    "Spoken For": {
+      "name": "Spoken For",
+      "description": "<p>Whenever someone else gains a String on you, your Wicked Master gains a String on them.</p>"
+    },
+    "Strange Impressions": {
+      "name": "Étranges imitations",
+      "description": "<p>Quand un personnage principal vous blesse ou vous aide à vous soigner, vous pouvez alors vous mettre à l’observer avec attention. Si vous procédez ainsi, gagnez temporairement une des actions de sa Mue, et ajoutez-la à votre propre livret. Elle disparaît une fois que vous l’avez utilisée.</p>"
+    },
+    "Streaming": {
+      "name": "Connectés",
+      "description": "<p>Vous avez une connexion télépathique avec les membres de votre clique. Vous pouvez toujours entendre leurs émotions et leurs peurs. Si vous voulez essayer d’entendre des pensées en particulier, <em>contemplez l’Abysse</em> à ce sujet en ajoutant +1 sur votre jet.</p>"
+    },
+    "Sympathetic Tokens": {
+      "name": "Fétiches",
+      "description": "<p>Une partie de votre pouvoir vient de l’utilisation de fétiches, des objets que vous subtilisez et qui ont une forte signification personnelle pour leurs propriétaires. Ils comptent comme des Ascendants.</p>"
+    },
+    "Sympathy is My Weapon": {
+      "name": "Ma compassion est mon arme",
+      "description": "<p>Lorsque vous pardonnez à quelqu’un de vous avoir fait du mal et excusez sa nature profonde, gagnez un Ascendant sur lui.</p>"
+    },
+    "Take the Blow": {
+      "name": "Take the Blow",
+      "description": "<p>When you leap into the way and take the blow instead of someone else, roll with Volatile.</p>"
+    },
+    "The Clique": {
+      "name": "La clique",
+      "description": "<p>Vous êtes à la tête de la clique la plus puissante, la plus coriace et la plus cool du coin. Choisissez ce qui fait la force de ses membres&#8239;:</p>\n<ul>\n<li>Ils ou elles sont armé·e·s (avec des flingues et des trucs vraiment dangereux)&#8239;;</li>\n<li>Ils ou elles ont des relations (avec de l’argent et des drogues de synthèse)&#8239;;</li>\n<li>Ils ou elles ont du talent (font partie d’un groupe de musique ou d’une équipe sportive)&#8239;;</li>\n<li>Ils ou elles forment une véritable secte (jurent allégeance aux forces des ténèbres et sont prêt·e·s à se donner la mort).</li>\n</ul>"
+    },
+    "The Feeding": {
+      "name": "La Sustentation",
+      "description": "<p>Vous vous nourrissez de sang encore chaud, prélevé directement à la source. Si c’est la première fois que quelqu’un se nourrit sur votre victime, vous gagnez 1 point d’expérience tous les deux. Quand vous vous nourrissez, choisissez deux des options suivantes&#8239;:</p>\n<ul>\n<li>Vous effacez 1 dégât&#8239;;</li>\n<li>Vous avez +1 sur votre prochain jet de dés&#8239;;</li>\n<li>Votre victime n’en meurt pas.</li>\n</ul>"
+    },
+    "The Hunger": {
+      "name": "La faim",
+      "description": "<p>Choisissez l’objet de votre faim&#8239;: la peur, le pouvoir, le vol ou les sensations fortes…</p>\n<p>Quand vous cherchez à l’assouvir au mépris de tout danger, ajoutez 1 sur vos jets. Quand vous ignorez une bonne occasion de la satisfaire, faites un jet pour<em>garder votre sang-froid</em>.</p>"
+    },
+    "The Shield": {
+      "name": "Au milieu des miens",
+      "description": "<p>Quand vous êtes entouré·e par votre clique, enlevez 1 sur tous les jets effectués contre vous.</p>"
+    },
+    "The Wild Hunt": {
+      "name": "La Chasse Sauvage",
+      "description": "<p>Quand vous faites ressortir votre côté animal, qui peut évoquer la souplesse d’un chat ou la voracité d’un loup, ajoutez +1 sur votre jet d’<em>allumer</em>.</p>"
+    },
+    "To The Books": {
+      "name": "To The Books",
+      "description": "<p>When the chips are down and your enemies seem unbeatable, you can turn to your friends for research help. Doing so counts as <em>Gazing Into the Abyss</em>. Add 1 to your roll for each friend who really dives into the work, even when it gets monotonous. On a 10 up, in addition to other results, the visions show you your enemy’s secret weakness and you gain a String on them.</p>"
+    },
+    "Transference": {
+      "name": "Transfert",
+      "description": "<p>À chaque fois que vous passez du temps à sincèrement écouter quelqu’un parler de ses soucis, cette personne efface 1 dégât et vous transfère ensuite tous ses dégâts restants.</p>"
+    },
+    "Transgressive Magic": {
+      "name": "Magie transgressive",
+      "description": "<p>Si votre rituel transgresse les normes morales ou sexuelles de la communauté dans laquelle vous vivez, ajoutez +1 sur votre jet de <em>Sorcellerie</em>.</p>"
+    },
+    "True Love": {
+      "name": "Véritable amour",
+      "description": "<p>Vous avez toujours un véritable amour. Ni plus, ni moins. Le premier est choisi lorsque vous annoncez votre histoire personnelle. Si vous tombez amoureux ou amoureuse de quelqu’un d’autre, donnez-lui un Ascendant et il ou elle deviendra alors votre nouveau véritable amour. Gagnez +1 sur vos jets chaque fois que vous tentez de gagner son cœur ou son affection.</p>"
+    },
+    "Try Harder Next Time": {
+      "name": "Tu feras mieux la prochaine fois",
+      "description": "<p>Quand vous merdez, infligez-vous la Condition que vous jugez appropriée et obtenez +1 sur votre prochain jet.</p>"
+    },
+    "Unashamed": {
+      "name": "N’a pas froid aux yeux",
+      "description": "<p>Vous pouvez donner un Ascendant à quelqu’un pour ajouter +3 sur votre jet pour l’<em>allumer</em>.</p>"
+    },
+    "Under Pressure": {
+      "name": "Sous pression",
+      "description": "<p>Si quelqu’un a au moins 3 Ascendants sur vous, ajoutez 1 sur vos jets pour satisfaire ses demandes.</p>"
+    },
+    "Unresolved Trauma": {
+      "name": "Traumatisme persistant",
+      "description": "<p>Quand quelque chose vous rappelle votre mort, vous devez prendre le temps de retrouver vos esprits, et gagner la Condition <strong>traumatisé·e</strong> si vous ne l’aviez pas déjà. Quand quelqu’un vous aide à vous débarrasser de cette Condition, vous gagnez tous les deux 1 point d’expérience.</p>"
+    },
+    "Unstable": {
+      "name": "Instable",
+      "description": "<p>Quand vous succombez à votre démon intérieur, gagnez 1 point d’expérience.</p>"
+    },
+    "Watch Dog": {
+      "name": "Watch Dog",
+      "description": "<p>You exist in the liminal space between two communities: one is resplendent with light, the other is damned to the shadows. It is your duty to guard the boundary.</p>\n<p>Mark experience whenever you weed out someone on the wrong side of the divide and put them in their place.</p>"
+    },
+    "Watchful Golem": {
+      "name": "Golem de protection",
+      "description": "<p>Quand vous défendez quelqu’un sans qu’elle ou il en soit informé·e ou qu’il ou elle s’en rende compte, gagnez 1 point d’expérience.</p>"
+    },
+    "What the Right Hand  Wants": {
+      "name": "Donner d’une main, reprendre de l’autre",
+      "description": "<p>Votre corps témoigne de nombreuses histoires passées, et d’encore plus nombreux désirs. Créez une nouvelle faim.</p>"
+    }
+  }
+}

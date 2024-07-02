@@ -6,7 +6,7 @@
   "license": "LICENSE",
   "compatibility": {
     "minimum": "12",
-    "verified": "12.325",
+    "verified": "12.327",
     "maximum": "13"
   },
   "authors": [
@@ -44,7 +44,57 @@
   "styles": [
     "css/monsterhearts.css"
   ],
-  "packs": [],
+  "packs": [
+    {
+      "label": "Bargains",
+      "name": "bargains",
+      "type": "Item",
+      "system": "pbta",
+      "path": "packs/bargains"
+    },
+    {
+      "label": "Hexes",
+      "name": "hexes",
+      "type": "Item",
+      "system": "pbta",
+      "path": "packs/hexes"
+    },
+    {
+      "label": "Moves",
+      "name": "moves",
+      "type": "Item",
+      "system": "pbta",
+      "path": "packs/moves"
+    },
+    {
+      "label": "Skin moves",
+      "name": "skin-moves",
+      "type": "Item",
+      "system": "pbta",
+      "path": "packs/skin-moves"
+    },
+    {
+      "label": "Skins",
+      "name": "skins",
+      "type": "Item",
+      "system": "pbta",
+      "path": "packs/skins"
+    },
+    {
+      "label": "Scenes",
+      "name": "scenes",
+      "type": "Scene",
+      "system": "pbta",
+      "path": "packs/scenes"
+    },
+    {
+      "label": "PDF sources",
+      "name": "pdf-sources",
+      "type": "JournalEntry",
+      "system": "pbta",
+      "path": "packs/pdf-sources"
+    }
+  ],
   "languages": [
     {
       "lang": "en",
