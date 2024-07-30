@@ -41,9 +41,6 @@
   "esmodules": [
     "monsterhearts.js"
   ],
-  "styles": [
-    "css/monsterhearts.css"
-  ],
   "packs": [
     {
       "label": "Bargains",
@@ -74,11 +71,25 @@
       "path": "packs/skin-moves"
     },
     {
+      "label": "Skin moves +",
+      "name": "skin-moves-",
+      "type": "Item",
+      "system": "pbta",
+      "path": "packs/skin-moves-"
+    },
+    {
       "label": "Skins",
       "name": "skins",
       "type": "Item",
       "system": "pbta",
       "path": "packs/skins"
+    },
+    {
+      "label": "Skins +",
+      "name": "skins-",
+      "type": "Item",
+      "system": "pbta",
+      "path": "packs/skins-"
     },
     {
       "label": "Scenes",
@@ -88,11 +99,11 @@
       "path": "packs/scenes"
     },
     {
-      "label": "PDF sources",
-      "name": "pdf-sources",
+      "label": "Sources & Credits",
+      "name": "sources-and-credits",
       "type": "JournalEntry",
       "system": "pbta",
-      "path": "packs/pdf-sources"
+      "path": "packs/sources-and-credits"
     }
   ],
   "languages": [

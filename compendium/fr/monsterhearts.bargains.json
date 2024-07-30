@@ -7,23 +7,23 @@
   "entries": {
     "Elsewise Power": {
       "name": "Un pouvoir venu d’ailleurs",
-      "description": "<p>Vous pouvez donner un ascendant à votre bienfaiteur·rice démoniaque afin d’utiliser une action que vous ne possédez pas, et ce une seule fois. Cette action peut venir de n’importe quelle mue.</p>"
+      "description": "<p>Vous pouvez donner un ascendant à votre bienfaiteur démoniaque afin d’utiliser une action que vous ne possédez pas, et ce une seule fois. Cette action peut venir de n’importe quelle mue.</p>"
     },
     "Numbing It Out": {
       "name": "Soigner le mal par le mal",
-      "description": "<p>Vous pouvez donner un ascendant à votre bienfaiteur·rice démoniaque afin de vous débarrasser d’une condition ou de jusqu’à 2 dégâts.</p>"
+      "description": "<p>Vous pouvez donner un ascendant à votre bienfaiteur démoniaque afin de vous débarrasser d’une condition ou de jusqu’à 2 dégâts.</p>"
     },
     "Strings Attached": {
       "name": "Tout a un prix",
-      "description": "<p>Vous pouvez demander à votre bienfaiteur·rice démoniaque de vous fournir quelque chose que vous voulez absolument. Le ou la MC fixe un prix et vous donne un indice quant à la façon dont cette offre pourrait se retourner contre vous. Si vous en payez le prix, vous obtenez ce que vous vouliez.</p>"
+      "description": "<p>Vous pouvez demander à votre bienfaiteur démoniaque de vous fournir quelque chose que vous voulez absolument. La MC fixe un prix et vous donne un indice quant à la façon dont cette offre pourrait se retourner contre vous. Si vous en payez le prix, vous obtenez ce que vous vouliez.</p>"
     },
     "The Power Flows Through  You": {
       "name": "Le pouvoir coule dans tes veines",
-      "description": "<p>Vous pouvez donner un ascendant à votre bienfaiteur·rice démoniaque afin d’ajouter 2 sur votre prochain jet de dés.</p>"
+      "description": "<p>Vous pouvez donner un ascendant à votre bienfaiteur démoniaque afin d’ajouter 2 sur votre prochain jet de dés.</p>"
     },
     "Uncanny Voices": {
       "name": "Étranges murmures",
-      "description": "<p>Vous pouvez donner un ascendant à votre bienfaiteur·rice démoniaque afin d’apprendre un secret sur le personnage avec qui vous êtes en train de parler. Le personnage vous révèle une peur secrète, un désir inavoué ou une force cachée de son choix.</p>"
+      "description": "<p>Vous pouvez donner un ascendant à votre bienfaiteur démoniaque afin d’apprendre un secret sur le personnage avec qui vous êtes en train de parler. Son joueur vous révèle une peur secrète, un désir inavoué ou une force cachée de son choix.</p>"
     }
   }
 }

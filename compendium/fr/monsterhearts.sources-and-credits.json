@@ -1,0 +1,60 @@
+{
+  "label": "Sources & Credits",
+  "entries": {
+    "English sources": {
+      "name": "Sources en VO",
+      "pages": {
+        "Reference Sheets & Core Skins": {
+          "name": "Fiches de référence et Mues de base",
+          "src": "modules/monsterhearts/pdf/reference-sheets-and-core-skins1.pdf"
+        },
+        "Cerberus": {
+          "name": "Cerbère",
+          "src": "modules/monsterhearts/pdf/The-Cerberus.pdf"
+        },
+        "Chosen": {
+          "name": "Élue",
+          "src": "modules/monsterhearts/pdf/the-chosen.pdf"
+        },
+        "Disciple": {
+          "name": "Disciple",
+          "src": "modules/monsterhearts/pdf/The-Disciple.pdf"
+        },
+        "Small Towns": {
+          "name": "Petites villes",
+          "src": "modules/monsterhearts/pdf/monsterhearts-2-small-towns1.pdf"
+        }
+      }
+    },
+    "French sources": {
+      "name": "Sources en VF",
+      "pages": {
+        "Core skins": {
+          "name": "Mues de base",
+          "src": "modules/monsterhearts/pdf/monsterhearts_mues_vol1_a_plier_en_trois_10.pdf"
+        },
+        "Player's cheat sheet": {
+          "name": "Antisèche pour les joueurs",
+          "src": "modules/monsterhearts/pdf/monsterhearts_antiseche_joueurs_10.pdf"
+        },
+        "MC's cheat sheet": {
+          "name": "Antisèche pour la MC",
+          "src": "modules/monsterhearts/pdf/monsterhearts_antiseche_mc_10.pdf"
+        }
+      }
+    },
+    "Note & Credits": {
+      "name": "Note & Crédits",
+      "pages": {
+        "Notes": {
+          "name": "Notes",
+          "text": "<p>Ce module est un contenu créé par un fan avec l'autorisation des détenteurs des droits. Il n'a pas été commandé, soutenu ou financé par eux. Je remercie les détenteurs des droits pour leur autorisation et j'espére que ce module améliorera votre expérience de jeu.</p><p>Toutes les marques, tous les noms commerciaux et tous les droits d'auteur sont la propriété de leurs détenteurs respectifs. Pour de plus amples informations, veuillez vous référer à la page des @UUID[.cDVcPkGNNqOI3f2f]{Crédits}.</p><div style=\"border:2px solid #F1B1E0;padding-left:10px;padding-right:10px;text-align:justify\"><p>Si vous appréciez le moduke et que vous avez les moyens de le faire, vous pouvez me soutenir en m'offrant un café sur <a href=\"https://www.buymeacoffee.com/yank\" target=\"_blank\">Buy Me a Coffee</a>. Votre geste serait grandement apprécié et contribuerait à soutenir le développement continu. Quoi qu'il en soit, je vous souhaite une expérience enrichissante et divertissante. N'hésitez pas à me contacter pour partager vos commentaires ou signaler tout problème éventuel.</p></div><h2>À qui s’adresse ce jeu ?</h2><p><em>Monsterhearts</em> est conçu pour des séances de deux à quatre heures, qui rassemblent entre trois et cinq personnes. Une d’entre elles endosse le rôle de MC (Maître ou Maîtresse de Cérémonie), et utilise des règles différentes du reste du groupe. Selon ce que vous préférez, votre partie pourra ne durer qu’une seule séance ou devenir une courte campagne de plusieurs épisodes.</p><p>Ce jeu est queer, ce qui signifie qu’il remet en cause le cadre hétérosexiste qui sous-tend tant d’histoires dans notre culture. En jouant, vous acceptez de vous confronter au chaos provoqué par toutes les possibilités et les incertitudes qui font partie de la notion même de désir.</p><h2>Mauvais genre ?</h2><p>Dans <em>Monsterhearts</em>, à moins que l’on ne fasse référence à une personne bien précise, le terme « MC » est genré au féminin et « joueurs » et « personnages » au masculin. Toutefois, il ne s’agit que de conventions d’écriture et cela n’empêche en rien, par exemple, un homme, une personne non genrée, intersexe ou plus généralement n’importe qui ne se genrant pas au féminin d’endosser le rôle de MC. De même, ce n’est pas parce que le nom d’une mue semble indiquer un genre donné que vous ne pouvez pas jouer un homme Sorcière, une femme Loup-garou ou une Ombre qui se pose encore pas mal de questions sur tout ça. Là aussi, sentez-vous libre d’être qui vous voulez être. C’est mieux pour tout le monde.</p><h2>Un film d’horreur dans un lycée</h2><p>Monsterhearts met en scène les vies compliquées d’adolescents dont le secret est d’être également des monstres. Le jeu explore donc d’un côté la terreur et la confusion que peut provoquer un corps qui change sans que vous ne lui ayez rien demandé, mais également ce que signifie cette nature monstrueuse. Cette dernière est d’ailleurs à prendre au sens littéral. En effet, les personnages sont vraiment des Vampires, Loups-garous, Sorcières, et autres créatures similaires. Toutefois, cet aspect est également une métaphore permettant d’aborder des expériences telles que l’exclusion, la honte, la différence – notamment sur les critères du genre et de l’orientation sexuelle – ou les pulsions autodestructrices. </p>"
+        },
+        "Credits": {
+          "name": "Crédits",
+          "text": "<h2>Version originale · Seconde édition</h2><p><em>Dédicacé à Jackson Tegu et R. K. Mooney.</em></p><p><strong>Conception et rédaction</strong>&#8239;: Avery Alder.</p><p><strong>Textes additionnels sur la question raciale et du racisme</strong>&#8239;: Ciel Sainte-Marie, James Mendez Hodes et Jeeyon Shim.<br /><strong>Relecture éditoriale</strong>&#8239;: Daniel Wood.</p><img src=\"modules/monsterhearts/img/pbta.png\" width=\"300\" /><p><strong>La base du système de <em>Monsterhearts</em></strong> découle de celui d’<em>Apocalypse World</em>, par D. Vincent Baker et Meguey Baker.</p><p><strong>Merci à</strong> Ross Cowman et à Luke Jordan pour leur aide technique.</p><p>Les nouvelles règles pour gagner de l’expérience sont empruntées au jeu <em>Dungeon World</em>, par Sage LaTorra et Adam Koebel.</p><p><a href=\"www.buriedwithoutceremony.com/monsterhearts\">www.buriedwithoutceremony.com/monsterhearts</a></p><h2>Version française · Seconde édition</h2><p><strong>Traduction</strong>&#8239;: Selene Tonon, Coralie David et Jérôme Larré.</p><p><strong>Relecture éditoriale</strong>&#8239;: Coralie David et Jérôme Larré.</p><p><strong>Relecture orthographique</strong>&#8239;: Alexandre Ecuvillon, Vincent Mottier et Aymeric Pelzer.</p><p><strong>Illustrations des mues</strong>&#8239;: Jérémie Morán · <a href=\"https://julian_artworks.artstation.com\">julian_artworks.artstation.com</a></p><p><strong>Maquette</strong>&#8239;: Coralie David.</p><p>Pour télécharger plus de matériel, rendez-vous sur <a href=\"https://www.lapinmarteau.com\">www.lapinmarteau.com</a></p><img src=\"modules/monsterhearts/img/logo-lapin-marteau.png\" width=\"150\" /><p>© 2024, Lapin Marteau, tous droits réservés.</p><h2>Adaptation Foundry VTT</h2><p>Système de jeu <a href=\"https://github.com/asacolips-projects/pbta\">PbtA</a> : <a href=\"https://github.com/asacolips-projects\">Asacolips</a> (Discord : asacolips)</p><p>Module <a href=\"https://github.com/YanKlInnomme/FoundryVTT-monsterhearts\">Monsterhearts</a> : <a href=\"https://github.com/YanKlInnomme\">YanK l'Innommé</a> (Discord : yanklinnomme)</p><p>Polices d'écritures :</p><ul><li>Yellow Magician par Erico Lebedenco CC BY-SA 3.0</li><li>El Messiri par Mohamed Gaber OFL 1.1</li></ul><p>Icones : <a href=\"https://game-icons.net\">Game-icons.net</a> CC BY 3.0</p>"
+        }
+      }
+    }
+  }
+}

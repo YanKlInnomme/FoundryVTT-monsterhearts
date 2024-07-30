@@ -3,15 +3,16 @@
   "mapping": {
     "name": "name",
     "description": "system.description",
-    "failure": "system.moveResults.failure.value",
+    "partialLabel": "system.moveResults.partial.label",
     "partial": "system.moveResults.partial.value",
+    "successLabel": "system.moveResults.success.label",
     "success": "system.moveResults.success.value",
     "choices": "system.choices"
   },
   "entries": {
     "Conditions": {
       "name": "Conditions",
-      "description": "<p>Si, lors d’une action, vous tirez profit d’une des Conditions de quelqu’un, ajoutez +1 sur votre jet. Toutefois, pour pouvoir bénéficier de ce bonus, vous devez expliquer la forme que prend l’utilisation de la Condition dans l’histoire, c’est-à-dire à la fois la manière dont vous tirez avantage de la mauvaise réputation de votre cible, et ce en quoi cela vous aide concrètement.</p>"
+      "description": "<p>Si, lors d’une action, vous tirez profit d’une des conditions de quelqu’un, ajoutez +1 sur votre jet. Toutefois, pour pouvoir bénéficier de ce bonus, vous devez expliquer la forme que prend l’utilisation de la condition dans l’histoire, c’est-à-dire à la fois la manière dont vous tirez avantage de la mauvaise réputation de votre cible, et ce en quoi cela vous aide concrètement.</p>"
     },
     "Gangs": {
       "name": "Clique",
@@ -20,7 +21,9 @@
     "Gaze Into the Abyss": {
       "name": "Contempler l’Abysse",
       "description": "<p><strong>Quand vous contemplez l’Abysse</strong>, précisez ce que vous cherchez et faites un jet de Ténébreux.</p>",
+      "partialLabel": "Succès partiel",
       "partial": "<p>Entre 7 et 9, les visions provoquées par l’Abysse sont confuses et angoissantes, mais vous obtenez quand même votre réponse.</p>",
+      "successLabel": "Succès",
       "success": "<p>Sur 10 ou plus, l’Abysse vous répond par une vision claire et vous gagnez +1 sur le prochain jet que vous ferez en rapport avec cette dernière.</p>"
     },
     "Healing": {
@@ -30,40 +33,58 @@
     "Keep Your Cool": {
       "name": "Garder son sang-froid",
       "description": "<p><strong>Quand vous gardez votre sang-froid et agissez malgré la peur</strong>, nommez ce qui devrait vous effrayer et faites un jet de Glacial.</p>",
-      "partial": "<p>Entre 7 et 9, le ou la MC vous informera de la manière dont vos actes vous rendent vulnérable, et vous pourrez alors choisir entre renoncer ou persister.</p>",
-      "success": "<p>Sur 10 ou plus, vous gardez votre calme et avez même un éclair de lucidité. Posez une question au ou à la MC et gagnez +1 sur votre prochain jet si vous agissez en fonction de sa réponse.</p>"
+      "partialLabel": "Succès partiel",
+      "partial": "<p>Entre 7 et 9, la MC vous informera de la manière dont vos actes vous rendent vulnérable, et vous pourrez alors choisir entre renoncer ou persister.</p>",
+      "successLabel": "Succès",
+      "success": "<p>Sur 10 ou plus, vous gardez votre calme et avez même un éclair de lucidité. Posez une question à la MC et gagnez +1 sur votre prochain jet si vous agissez en fonction de sa réponse.</p>"
     },
     "Lash Out Physically": {
       "name": "Cogner",
       "description": "<p><strong>Quand vous cognez quelqu’un</strong>, faites un jet d’Impulsif.</p>",
-      "partial": "<p>Entre 7 et 9, infligez des dégâts et choisissez également une option dans la liste suivante&#8239;:</p>\n<ul>\n<li>Votre victime découvre quelque chose sur votre véritable nature et gagne un Ascendant sur vous&#8239;;</li>\n<li>Le ou la MC décide de la réelle gravité de la blessure&#8239;;</li>\n<li>Vous succombez à votre démon intérieur.</li>\n</ul>",
+      "partialLabel": "Succès partiel",
+      "partial": "<p>Entre 7 et 9, infligez des dégâts et choisissez également une option dans la liste suivante&#8239;:</p>\n<ul>\n<li>Votre victime découvre quelque chose sur votre véritable nature et gagne un ascendant sur vous&#8239;;</li>\n<li>La MC décide de la réelle gravité de la blessure&#8239;;</li>\n<li>Vous succombez à votre démon intérieur.</li>\n</ul>",
+      "successLabel": "Succès",
       "success": "<p>Sur 10 ou plus, infligez des dégâts à votre cible qui reste abasourdie un moment avant de pouvoir réagir.</p>"
     },
     "Pulling Strings": {
       "name": "Manipuler",
-      "description": "<p><strong>Quand vous dépensez un Ascendant pour manipuler quelqu’un</strong>, choisissez une option dans la liste suivante&#8239;:</p>\n<ul>\n<li>Tentez votre cible pour lui faire faire ce que vous voulez&#8239;;</li>\n<li>Donnez-lui une condition&#8239;;</li>\n<li>Ajoutez 1 sur un jet dont elle est la cible&#8239;;</li>\n<li>Ajoutez 1 aux dégâts que vous lui infligez.</li>\n</ul>"
+      "description": "<p><strong>Quand vous dépensez un ascendant pour manipuler quelqu’un</strong>, choisissez une option dans la liste suivante&#8239;:</p>\n<ul>\n<li>Tentez votre cible pour lui faire faire ce que vous voulez&#8239;;</li>\n<li>Donnez-lui une condition&#8239;;</li>\n<li>Ajoutez 1 sur un jet dont elle est la cible&#8239;;</li>\n<li>Ajoutez 1 aux dégâts que vous lui infligez.</li>\n</ul>"
     },
     "Run Away": {
       "name": "Fuir",
       "description": "<p><strong>Quand vous fuyez quelque chose</strong>, faites un jet d’Impulsif.</p>",
+      "partialLabel": "Succès partiel",
       "partial": "<p>Entre 7 et 9, vous réussissez à vous enfuir, mais vous devez choisir une option dans la liste suivante&#8239;:</p>\n<ul>\n<li>Vous vous précipitez au-devant de quelque chose d’encore pire&#8239;;</li>\n<li>Vous faites un boucan de tous les diables ou vous donnez en spectacle&#8239;;</li>\n<li>Vous laissez quelque chose derrière vous.</li>\n</ul>",
+      "successLabel": "Succès",
       "success": "<p>Sur 10 ou plus, vous réussissez à vous enfuir et à vous mettre en sécurité.</p>"
     },
     "Shut Someone Down": {
       "name": "Rembarrer",
       "description": "<p><strong>Quand vous rembarrez quelqu’un</strong>, faites un jet de Glacial.</p>",
-      "partial": "<p>Entre 7 et 9, choisissez un effet dans la liste ci-dessous, mais vous donnez une piètre image de vous et la cible vous donne une Condition.</p><ul>\n<li>Elle perd un Ascendant sur vous&#8239;;</li>\n<li>Si elle n’a pas d’Ascendant sur vous, gagnez un Ascendant sur elle&#8239;;</li>\n<li>Elle gagne une Condition&#8239;;</li>\n<li>Vous gagnez +1 sur votre prochain jet.</li>\n</ul>",
-      "success": "<p>Sur 10 ou plus, choisissez une option dans la liste ci-dessous.</p><ul>\n<li>Elle perd un Ascendant sur vous&#8239;;</li>\n<li>Si elle n’a pas d’Ascendant sur vous, gagnez un Ascendant sur elle&#8239;;</li>\n<li>Elle gagne une Condition&#8239;;</li>\n<li>Vous gagnez +1 sur votre prochain jet.</li>\n</ul>"
+      "partialLabel": "Succès partiel",
+      "partial": "<p>Entre 7 et 9, choisissez un effet dans la liste ci-dessous, mais vous donnez une piètre image de vous et la cible vous donne une condition.</p><ul>\n<li>Elle perd un ascendant sur vous&#8239;;</li>\n<li>Si elle n’a pas d’ascendant sur vous, gagnez un ascendant sur elle&#8239;;</li>\n<li>Elle gagne une condition&#8239;;</li>\n<li>Gagnez +1 sur votre prochain jet.</li>\n</ul>",
+      "successLabel": "Succès",
+      "success": "<p>Sur 10 ou plus, choisissez une option dans la liste ci-dessous.</p><ul>\n<li>Elle perd un ascendant sur vous&#8239;;</li>\n<li>Si elle n’a pas d’ascendant sur vous, gagnez un ascendant sur elle&#8239;;</li>\n<li>Elle gagne une condition&#8239;;</li>\n<li>Gagnez +1 sur votre prochain jet.</li>\n</ul>"
     },
     "Skirting Death": {
       "name": "Tromper la mort",
-      "description": "<p><strong>Quand vous prenez votre quatrième dégât</strong>, mourez.</p>\n<p><strong>Pour éviter la mort</strong>, effacez tous vos dégâts, et choisissez une option dans la liste suivante&#8239;:</p>\n<ul>\n<li>Succombez à votre démon intérieur&#8239;;</li>\n<li>Perdez tous les Ascendants que vous avez sur tout le monde.</li>\n</ul>"
+      "description": "<p><strong>Quand vous prenez votre quatrième dégât</strong>, mourez.</p>\n<p><strong>Pour éviter la mort</strong>, effacez tous vos dégâts, et choisissez une option dans la liste suivante&#8239;:</p>\n<ul>\n<li>Succombez à votre démon intérieur&#8239;;</li>\n<li>Perdez tous les ascendants que vous avez sur tout le monde.</li>\n</ul>"
     },
     "Turn Someone On": {
       "name": "Allumer",
       "description": "<p><strong>Quand vous allumez quelqu’un</strong>, faites un jet de Sexy.</p>",
-      "partial": "<p>Entre 7 et 9, elle peut choisir soit de vous concéder un Ascendant, soit une option ci-dessous.</p><ul>\n<li>Je me donne à toi&#8239;;</li>\n<li>Je te promets quelque chose que je pense que tu veux&#8239;;</li>\n<li>Je suis embarrassé·e et j’agis de façon franchement gênante.</li>\n</ul>",
-      "success": "<p>Sur 10 ou plus, gagnez un Ascendant sur votre cible et cette dernière choisit une option dans la liste ci-dessous.</p><ul>\n<li>Je me donne à toi&#8239;;</li>\n<li>Je te promets quelque chose que je pense que tu veux&#8239;;</li>\n<li>Je suis embarrassé·e et j’agis de façon franchement gênante.</li>\n</ul>"
+      "partialLabel": "Succès partiel",
+      "partial": "<p>Entre 7 et 9, elle peut choisir soit de vous concéder un ascendant, soit une option ci-dessous.</p><ul>\n<li>Je me donne à toi&#8239;;</li>\n<li>Je te promets quelque chose que je pense que tu veux&#8239;;</li>\n<li>Je suis embarrassé et j’agis de façon franchement gênante.</li>\n</ul>",
+      "successLabel": "Succès",
+      "success": "<p>Sur 10 ou plus, gagnez un ascendant sur votre cible et cette dernière choisit une option dans la liste ci-dessous.</p><ul>\n<li>Je me donne à toi&#8239;;</li>\n<li>Je te promets quelque chose que je pense que tu veux&#8239;;</li>\n<li>Je suis embarrassé et j’agis de façon franchement gênante.</li>\n</ul>"
+    },
+    "Non-Attraction": {
+      "name": "Non-attirance",
+      "description": "<p><strong>Si quelqu’un tente d’allumer votre personnage, mais que ce dernier ne peut pas y être sensible dans ces circonstances-là</strong>, dites-le. Considérez à la place qu’il s’agit d’un jet de rembarrer, fait en utilisant la caractéristique Sexy.</p>",
+      "partialLabel": "Succès partiel",
+      "partial": "<p>Entre 7 et 9, choisissez un effet dans la liste ci-dessous, mais vous donnez une piètre image de vous et la cible vous donne une condition.</p><ul>\n<li>Elle perd un ascendant sur vous&#8239;;</li>\n<li>Si elle n’a pas d’ascendant sur vous, gagnez un ascendant sur elle&#8239;;</li>\n<li>Elle gagne une condition&#8239;;</li>\n<li>Gagnez +1 sur votre prochain jet.</li>\n</ul>",
+      "successLabel": "Succès",
+      "success": "<p>Sur 10 ou plus, choisissez une option dans la liste ci-dessous.</p><ul>\n<li>Elle perd un ascendant sur vous&#8239;;</li>\n<li>Si elle n’a pas d’ascendant sur vous, gagnez un ascendant sur elle&#8239;;</li>\n<li>Elle gagne une condition&#8239;;</li>\n<li>Gagnez +1 sur votre prochain jet.</li>\n</ul>"
     }
   }
 }

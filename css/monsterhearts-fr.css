@@ -1,0 +1,88 @@
+/* Variables Foundry VTT */
+:root {
+    --font-primary: Elmessiri, sans-serif;
+}
+
+/* Polices d'écriture */
+@font-face {
+    font-family: Elmessiri;
+    src: url("../fonts/elmessiri-bold.woff2") format("woff2"), url("../fonts/elmessiri-bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Elmessiri;
+    src: url("../fonts/elmessiri-semibold.woff2") format("woff2"), url("../fonts/elmessiri-semibold.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Elmessiri;
+    src: url("../fonts/elmessiri-medium.woff2") format("woff2"), url("../fonts/elmessiri-medium.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Elmessiri;
+    src: url("../fonts/elmessiri-regular.woff2") format("woff2"), url("../fonts/elmessiri-regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: YellowMagician;
+    src: url("../fonts/YellowMagician.woff2") format("woff2"), url("../fonts/YellowMagician.woff") format("woff");
+}
+
+/* Logo Monsterhearts */
+#logo {
+    content: url("../img/logo-fr.webp");
+}
+
+/* Mise en pause */ 
+#pause {
+    font-family: YellowMagician, sans-serif;
+    font-variant: small-caps;
+}
+
+/* Rest of the specific styles */
+.vtt .sidebar-tab {
+    font-family: "Elmessiri", sans-serif;
+}
+
+.vtt .window-header {
+    font-family: "Elmessiri", sans-serif;
+}
+
+.pbta {
+    font-family: Elmessiri, sans-serif;
+}
+
+.pbta.sheet .cell input[type=text] {
+    font-family: Elmessiri, sans-serif;
+}
+
+.pbta.sheet .sheet-attributes .cell--stats .stat .cell__title {
+    font-family: YellowMagician, sans-serif;
+}
+
+.pbta.sheet .cell__title {
+    font-family: YellowMagician, sans-serif;
+    font-variant: small-caps;
+}
+
+.sheet.journal-entry .journal-header .title {
+    font-family: YellowMagician, sans-serif;
+    font-variant: small-caps;
+}
+
+.vtt .window-app input:not(.fa-classic,.fa-light,.fa-regular,.fa-solid,.fa-thin,.fal,.far,.fas,.fat), .vtt .window-app button:not(.fa-classic,.fa-light,.fa-regular,.fa-solid,.fa-thin,.fal,.far,.fas,.fat), .vtt .window-app select:not(.fa-classic,.fa-light,.fa-regular,.fa-solid,.fa-thin,.fal,.far,.fas,.fat), .vtt .window-app textarea:not(.fa-classic,.fa-light,.fa-regular,.fa-solid,.fa-thin,.fal,.far,.fas,.fat) {
+    font-family: Elmessiri, sans-serif;
+}
+
+.pbta.sheet label, .pbta.sheet h1, .pbta.sheet h2 {
+    font-family: Elmessiri, sans-serif;
+}

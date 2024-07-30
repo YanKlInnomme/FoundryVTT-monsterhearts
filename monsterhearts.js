@@ -33,12 +33,179 @@ Hooks.on('babele.init', () => {
   }
 });
 
-Hooks.on("createActor", async (actor) => {
-  if (!actor.system.img || actor.system.img === "icons/svg/mystery-man.svg") {
-    await actor.update({
-      "img": "modules/monsterhearts/img/icons/cultist.svg"
+function loadCSS(filePath) {
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.type = "text/css";
+  link.href = filePath;
+  document.head.appendChild(link);
+}
+
+Hooks.once('ready', () => {
+  const currentLanguage = game.settings.get("core", "language");
+  const baseCssFilePath = "modules/monsterhearts/css/monsterhearts.css";
+  const languageSpecificCssFilePath = currentLanguage === "fr" 
+    ? "modules/monsterhearts/css/monsterhearts-fr.css" 
+    : "modules/monsterhearts/css/monsterhearts-en.css";
+  
+  loadCSS(baseCssFilePath);
+  loadCSS(languageSpecificCssFilePath);
+
+  Hooks.on("renderSettingsConfig", () => {
+    const newLanguage = game.settings.get("core", "language");
+    if (newLanguage !== currentLanguage) {
+      location.reload();
+    }
+  });
+});
+
+Hooks.once('ready', () => {
+    game.settings.set('pbta', 'hideRollMode', true);
+});
+
+function generateTokenImageFilenames(name, ext) {
+  const variants = [
+    '-token', '_token', 'token', '(token)', '[token]', 
+    '%20-%20token', '%20_%20token', '%20token', '%20(token)', '%20[token]',
+    '-Token', '_Token', 'Token', '(Token)', '[Token]', 
+    '%20-%20Token', '%20_%20Token', '%20Token', '%20(Token)', '%20[Token]'
+  ];
+
+  return variants.map(variant => `${name}${variant}.${ext}`);
+}
+
+async function fileExists(filePath) {
+  const basePath = filePath.split('/').slice(0, -1).join('/');
+  try {
+    const result = await FilePicker.browse('data', basePath);
+    return result.files.includes(filePath);
+  } catch (error) {
+    return false;
+  }
+}
+
+async function getTokenImagePath(actorImgPath) {
+  const imgParts = actorImgPath.split('/');
+  const fileName = imgParts.pop();
+  const [name, ext] = fileName.split('.');
+  const basePath = imgParts.join('/');
+
+  const possibleFilenames = generateTokenImageFilenames(name, ext);
+
+  const fileChecks = possibleFilenames.map(async (tokenFileName) => {
+    const tokenImgPath = `${basePath}/${tokenFileName}`;
+    return await fileExists(tokenImgPath) ? tokenImgPath : null;
+  });
+
+  const results = await Promise.all(fileChecks);
+  const tokenImgPath = results.find(path => path !== null);
+
+  return tokenImgPath || actorImgPath;
+}
+
+Hooks.on("createActor", async (actor, options, userId) => {
+  try {
+    if (options.duplicate) return;
+
+    if (!actor.img || actor.img === "icons/svg/mystery-man.svg") {
+      const actorImg = "modules/monsterhearts/img/icons/cultist.svg";
+      const tokenImg = await getTokenImagePath(actorImg);
+
+      await actor.update({ "img": actorImg });
+      await actor.prototypeToken.update({ "texture.src": tokenImg });
+
+      Hooks.once("renderActorSheet", (sheet) => {
+        if (sheet.actor.id === actor.id) {
+          sheet.render();
+        }
+      });
+    }
+  } catch (error) {
+    console.error('Error in createActor hook:', error);
+  }
+});
+
+Hooks.on("updateActor", async (actor, data, options, userId) => {
+  try {
+    if (data.img) {
+      const tokenImg = await getTokenImagePath(data.img);
+
+      await actor.prototypeToken.update({ "texture.src": tokenImg });
+
+      const tokens = actor.getActiveTokens(true);
+      for (let token of tokens) {
+        await token.document.update({ "texture.src": tokenImg });
+      }
+    }
+  } catch (error) {
+    console.error('Error in updateActor hook:', error);
+  }
+});
+
+const hideAndRestrictCompendiums = () => {
+  const currentLanguage = game.settings.get("core", "language");
+
+  if (currentLanguage !== "fr") {
+    const compendiumsToHide = [
+      "monsterhearts.skin-moves-",
+      "monsterhearts.skins-"
+    ];
+
+    compendiumsToHide.forEach(compendiumName => {
+      const compendium = game.packs.get(compendiumName);
+      if (compendium) {
+        const compendiumElement = $(`.directory-item[data-pack='${compendium.collection}']`);
+        if (compendiumElement.length) {
+          compendiumElement.hide();
+        }
+
+        const originalGetDocuments = compendium.getDocuments;
+        compendium.getDocuments = async function (...args) {
+          if (game.settings.get("core", "language") !== "fr") {
+            console.warn(`Accès restreint au compendium ${compendiumName}`);
+            return [];
+          }
+          return originalGetDocuments.apply(this, args);
+        };
+
+        const originalGetIndex = compendium.getIndex;
+        compendium.getIndex = async function (...args) {
+          if (game.settings.get("core", "language") !== "fr") {
+            console.warn(`Accès restreint au compendium ${compendiumName}`);
+            return [];
+          }
+          return originalGetIndex.apply(this, args);
+        };
+      }
     });
   }
+};
+
+Hooks.on('ready', () => {
+  setTimeout(hideAndRestrictCompendiums, 1000);
+});
+
+Hooks.on('renderCompendiumDirectory', () => {
+  setTimeout(hideAndRestrictCompendiums, 1000);
+});
+
+Hooks.once('ready', async function() {
+  const journalEntryUuid = "Compendium.monsterhearts.sources-and-credits.JournalEntry.kgKyp984r139nDwK";
+  const delay = 2000;
+
+  setTimeout(async () => {
+    try {
+      const journalEntry = await fromUuid(journalEntryUuid);
+
+      if (journalEntry) {
+        journalEntry.sheet.render(true);
+      } else {
+        console.error(`Journal entry with UUID ${journalEntryUuid} not found`);
+      }
+    } catch (error) {
+      console.error(`Error fetching journal entry: ${error}`);
+    }
+  }, delay);
 });
 
 Hooks.on("renderSettings", (app, html) => {

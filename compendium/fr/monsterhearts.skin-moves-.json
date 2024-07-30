@@ -1,0 +1,70 @@
+{
+  "label": "Actions des Mues +",
+  "mapping": {
+    "name": "name",
+    "description": "system.description",
+    "partialLabel": "system.moveResults.partial.label",
+    "partial": "system.moveResults.partial.value",
+    "successLabel": "system.moveResults.success.label",
+    "success": "system.moveResults.success.value",
+    "choices": "system.choices"
+  },
+  "folders": {
+    "Ophidian+ Moves": "Actions de l'Ophidien+",
+    "Selkie+ Moves": "Actions de la Selkie+"
+  },
+  "entries": {
+    "Body of Water": {
+      "name": "Corps liquide",
+      "description": "<p>Quand vous passez une journée entière sans vous plonger totalement dans l’eau, vous subissez 1 dégât. Quand vous vous immergez et prenez le temps de vous relaxer, vous pouvez soigner 1 dégât et vous débarrasser d’une condition.</p>"
+    },
+    "Catch of the Day": {
+      "name": "Prise du jour",
+      "description": "<p>Quand vous ne comprenez pas ce qui se passe ou ce que quelqu’un veut dire, et que cela vous attire des ennuis ou vous pousse à faire de mauvais choix, gagnez 1 point d’expérience.</p>"
+    },
+    "Keep Away": {
+      "name": "Dragée haute",
+      "description": "<p>On peut voler votre peau, mais jamais la détruire. Quand vous cherchez à accomplir une tâche pour la personne qui la détient actuellement, ajoutez 1 sur tous vos jets.</p>\n<p>Si vous y parvenez et qu’il ne vous rend pas votre peau, gagnez un ascendant. Ajoutez 1 sur tous vos jets contre lui tant qu’il ne vous a pas donné de nouvelle tâche à accomplir.</p>"
+    },
+    "Move 1": {
+      "name": "Dynastie sur le déclin",
+      "description": "<p>À l’époque où les serpents régnaient sur ce monde, votre famille était aussi puissante que nombreuse. Maintenant, elle n’est plus que l’ombre d’elle-même et vit dans la nostalgie de sa gloire passée. Choisissez ce qu’elle veut retrouver&#8239;:</p>\n<ul>\n<li>Son influence politique&#8239;;</li>\n<li>Sa richesse disparue&#8239;;</li>\n<li>Sa beauté déclinante&#8239;;</li>\n<li>Ses alliés secrets.</li>\n</ul>\n<p>À chaque fois que l’on vous convainc d’accéder aux demandes d’un membre de votre famille, ce dernier gagne un ascendant sur vous et vous obtenez +1 sur votre prochain jet pour réaliser cette tâche. À chaque fois que vous aidez votre famille à regagner un peu de sa gloire passée, gagnez 1 point d’expérience.</p>"
+    },
+    "Move 2": {
+      "name": "La patience est une vertu",
+      "description": "<p>Quand vous rongez votre frein et évitez de répondre directement aux actions ou provocations d’un antagoniste, faites un jet de Glacial.</p>",
+      "partialLabel": "Succès partiel",
+      "partial": "<p>Entre 7 et 9, vous gagnez +1 sur votre prochain jet pour vous en prendre à lui dès que vous le reverrez.</p>",
+      "successLabel": "Succès",
+      "success": "<p>Sur 10 ou plus, gagnez un ascendant sur lui.</p>"
+    },
+    "Move 3": {
+      "name": "L’instant de vérité",
+      "description": "<p>Quand vous montrez votre véritable apparence à quelqu’un, cette personne gagne un ascendant sur vous. Si elle vous accepte tel que vous êtes réellement, elle gagne un point d’expérience. Si elle vous rejette, vous gagnez +1 sur votre prochain jet contre elle.</p>"
+    },
+    "Move 4": {
+      "name": "L’ordre nouveau",
+      "description": "<p>Quand vous apprenez à satisfaire un de vos besoins au sein de la société humaine plutôt qu’auprès de votre famille, gagnez 1 point d’expérience. Quand un autre personnage vous aide à vous adapter à la société humaine, il gagne 1 point d’expérience.</p>"
+    },
+    "Move 5": {
+      "name": "Méduser",
+      "description": "<p>Quand vous fixez une personne sans cligner des yeux, faites un jet de Sexy.</p>",
+      "partialLabel": "Succès partiel",
+      "partial": "<p>Entre 7 et 9, il se passera la même chose, mais uniquement si vous sifflez bruyamment tout du long et votre cible aura conscience qu’il s’est passé quelque chose d’étrange.</p>",
+      "successLabel": "Succès",
+      "success": "<p>Sur 10 ou plus, votre cible se fige jusqu’à ce que vous cligniez à nouveau des yeux ou que quelqu’un la touche, et elle ne se souviendra de rien d’inhabituel.</p>"
+    },
+    "Ocean’s Breath": {
+      "name": "Le cœur de l’océan",
+      "description": "<p>Quand vous ressentez vraiment le mal du pays, choisissez une des options suivantes&#8239;:</p>\n<ul>\n<li>L’océan vous offre ce qui, selon lui, vous aidera à vous sentir mieux&#8239;;</li>\n<li>L’océan emporte au loin ce qui, selon lui, vous pèse le plus.</li>\n</ul>\n<p>L’océan ne comprend pas vraiment le monde des humains. Pour arriver à ses fins, il peut parfois causer des dégâts sérieux, ou moins très difficiles à expliquer. La MC vous dira ce qu’il se passe vraiment.</p>"
+    },
+    "Outer Skin": {
+      "name": "Peau des Profondeurs",
+      "description": "<p>Revêtez votre peau pour ressembler à une otarie, respirer sous l’eau et nager incroyablement vite. Si vous la portez, vous pouvez aussi décider de retourner pour toujours au royaume des Profondeurs. Ce choix est irrévocable. Créez un nouveau personnage.</p>"
+    },
+    "Siren Song": {
+      "name": "Le chant des sirènes",
+      "description": "<p>Quand vous êtes complètement trempée, vous pouvez entonner un chant envoûtant qui capte l’attention de tous ceux qui peuvent l’entendre. Choisissez une option dans la liste ci-dessous&#8239;:</p>\n<ul>\n<li>Ils s’avancent vers vous en titubant, fascinés, mais pas au point de se faire mal&#8239;;</li>\n<li>Ils écoutent pleinement leurs émotions et se mettent à pleurer.</li>\n</ul>"
+    }
+  }
+}
