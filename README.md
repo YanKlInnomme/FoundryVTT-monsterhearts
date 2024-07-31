@@ -4,7 +4,7 @@
 
 # Module monsterhearts pour Foundry VTT
 
-Ce module est une adaptation du jeu de rôle Monsterhearts pour Foundry VTT. Il fonctionne de paire avec le système Powered by the Apocalypse (Propulsé par l'Apocalypse) d'Asacolips.
+Ce module est une adaptation du jeu de rôle Monsterhearts pour Foundry VTT. Il fonctionne de paire avec le système Powered by the Apocalypse d'Asacolips.
 
 Si vous appréciez le module et que vous avez les moyens de le faire, vous pouvez me soutenir en m'offrant un café sur Buy Me a Coffee (https://www.buymeacoffee.com/yank). Votre geste serait grandement apprécié et contribuerait à soutenir le développement continu. Quoi qu'il en soit, je vous souhaite une expérience enrichissante et divertissante. N'hésitez pas à me contacter pour partager vos commentaires ou signaler tout problème éventuel.
 
@@ -44,14 +44,14 @@ In order to work this module requires the following prior installations:
  * The 'Powered by the Apocalypse' system (pbta)
 
 In addition for multilingual use, it is advisable to install the following modules:
-    * The Babele module (The essential for translation)
-    * The Lib-wrapper module (Required by Babele)
+ * The Babele module (The essential for translation)
+ * The Lib-wrapper module (Required by Babele)
 
 ## Licenses
 
 This module is fan content created with the permission of the rights holders. It was not commissioned, endorsed or funded by them. I thank the rights holders for their permission and hope that this module will enhance your gaming experience. This project includes:
 
-- **Content**: MONSTERHEARTS, including its texts, illustrations, characters, names and likenesses, is a protected work. This game is written by Avery Alder and published by [Buried Without Ceremony](https://buriedwithoutceremony.com/). The French translation and commercial distribution are provided by [Lapin Marteau](https://www.lapinmarteau.com/). The mues illustrations included in this module come from the French version and were created by [Jérémie Morán](https://julian_artworks.artstation.com/). All rights reserved. The texts and illustrations are used with permission. Elements of this project protected by copyright may not be distributed commercially or freely, including illustrations and texts.
+- **Content**: MONSTERHEARTS, including its texts, illustrations, characters, names and likenesses, is a protected work. This game is written by Avery Alder and published by [Buried Without Ceremony](https://buriedwithoutceremony.com/). The French translation and commercial distribution are provided by [Lapin Marteau](https://www.lapinmarteau.com/). The skins illustrations included in this module come from the French version and were created by [Jérémie Morán](https://julian_artworks.artstation.com/). All rights reserved. The texts and illustrations are used with permission. Elements of this project protected by copyright may not be distributed commercially or freely, including illustrations and texts.
 
 - **Source code**: All source code _(javascript, css, etc.)_ is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
 

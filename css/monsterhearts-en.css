@@ -1,85 +1,88 @@
-/* Variables Foundry VTT */
 :root {
-    --font-primary: Fontin, sans-serif;
-}
-
-/* Polices d'écriture */
-@font-face {
-    font-family: Fontin;
-    src: url("../fonts/Fontin_Sans_B_45b.woff2") format("woff2"), url("../fonts/Fontin_Sans_B_45b.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
+--font-primary:Fontin,sans-serif
 }
 
 @font-face {
-    font-family: Fontin;
-    src: url("../fonts/Fontin_Sans_BI_45b.woff2") format("woff2"), url("../fonts/Fontin_Sans_BI_45b.woff") format("woff");
-    font-weight: 700;
-    font-style: italic;
+font-family:Fontin;
+font-style:normal;
+font-weight:700;
+src:url(../fonts/Fontin_Sans_B_45b.woff2) format("woff2"),url(../fonts/Fontin_Sans_B_45b.woff) format("woff")
 }
 
 @font-face {
-    font-family: Fontin;
-    src: url("../fonts/Fontin_Sans_I_45b.woff2") format("woff2"), url("../fonts/Fontin_Sans_I_45b.woff") format("woff");
-    font-weight: 400;
-    font-style: italic;
+font-family:Fontin;
+font-style:italic;
+font-weight:700;
+src:url(../fonts/Fontin_Sans_BI_45b.woff2) format("woff2"),url(../fonts/Fontin_Sans_BI_45b.woff) format("woff")
 }
 
 @font-face {
-    font-family: Fontin;
-    src: url("../fonts/Fontin_Sans_R_45b.woff2") format("woff2"), url("../fonts/Fontin_Sans_R_45b.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
+font-family:Fontin;
+font-style:italic;
+font-weight:400;
+src:url(../fonts/Fontin_Sans_I_45b.woff2) format("woff2"),url(../fonts/Fontin_Sans_I_45b.woff) format("woff")
 }
 
 @font-face {
-    font-family: Yataghan;
-    src: url("../fonts/Yataghan-Regular.woff2") format("woff2"), url("../fonts/Yataghan-Regular.woff") format("woff");
+font-family:Fontin;
+font-style:normal;
+font-weight:400;
+src:url(../fonts/Fontin_Sans_R_45b.woff2) format("woff2"),url(../fonts/Fontin_Sans_R_45b.woff) format("woff")
 }
 
-/* Logo Monsterhearts */
+@font-face {
+font-family:Yataghan;
+src:url(../fonts/Yataghan-Regular.woff2) format("woff2"),url(../fonts/Yataghan-Regular.woff) format("woff")
+}
+
 #logo {
-    content: url("../img/logo.webp");
+content:url("../img/logo.webp")
 }
 
-/* Mise en pause */ 
 #pause {
-    font-family: Yataghan, sans-serif;
-}
-
-/* Rest of the specific styles */
-.vtt .sidebar-tab {
-    font-family: "Fontin", sans-serif;
-}
-
-.vtt .window-header {
-    font-family: "Fontin", sans-serif;
+font-family:Yataghan,sans-serif
 }
 
 .pbta {
-    font-family: Fontin, sans-serif;
+font-family:Fontin,sans-serif
 }
 
 .pbta.sheet .cell input[type=text] {
-    font-family: Fontin, sans-serif;
-}
-
-.pbta.sheet .sheet-attributes .cell--stats .stat .cell__title {
-    font-family: Yataghan, sans-serif;
+font-family:Fontin,sans-serif
 }
 
 .pbta.sheet .cell__title {
-    font-family: Yataghan, sans-serif;
+font-family:Yataghan,sans-serif
+}
+
+.pbta.sheet .sheet-attributes .cell--stats .stat .cell__title {
+font-family:Yataghan,sans-serif
+}
+
+.pbta.sheet label,.pbta.sheet h1,.pbta.sheet h2 {
+font-family:Fontin,sans-serif
 }
 
 .sheet.journal-entry .journal-header .title {
-    font-family: Yataghan, sans-serif;
+font-family:Yataghan,sans-serif
 }
 
-.vtt .window-app input:not(.fa-classic,.fa-light,.fa-regular,.fa-solid,.fa-thin,.fal,.far,.fas,.fat), .vtt .window-app button:not(.fa-classic,.fa-light,.fa-regular,.fa-solid,.fa-thin,.fal,.far,.fas,.fat), .vtt .window-app select:not(.fa-classic,.fa-light,.fa-regular,.fa-solid,.fa-thin,.fal,.far,.fas,.fat), .vtt .window-app textarea:not(.fa-classic,.fa-light,.fa-regular,.fa-solid,.fa-thin,.fal,.far,.fas,.fat) {
-    font-family: Fontin, sans-serif;
+.vtt #chat-log .cell__title {
+font-family:Fontin,sans-serif
 }
 
-.pbta.sheet label, .pbta.sheet h1, .pbta.sheet h2 {
-    font-family: Fontin, sans-serif;
+.vtt #chat-log .message {
+font-family:Fontin,sans-serif;
+}
+
+.vtt .sidebar-tab {
+font-family:Fontin,sans-serif
+}
+
+.vtt .window-app input:not(.fa-classic,.fa-light,.fa-regular,.fa-solid,.fa-thin,.fal,.far,.fas,.fat),.vtt .window-app button:not(.fa-classic,.fa-light,.fa-regular,.fa-solid,.fa-thin,.fal,.far,.fas,.fat),.vtt .window-app select:not(.fa-classic,.fa-light,.fa-regular,.fa-solid,.fa-thin,.fal,.far,.fas,.fat),.vtt .window-app textarea:not(.fa-classic,.fa-light,.fa-regular,.fa-solid,.fa-thin,.fal,.far,.fas,.fat) {
+font-family:Fontin,sans-serif
+}
+
+.vtt .window-header {
+font-family:Fontin,sans-serif
 }

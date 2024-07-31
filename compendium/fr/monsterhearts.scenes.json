@@ -1,8 +1,17 @@
 {
   "label": "Scènes",
+  "mapping": {
+    "name": "name",
+    "navName": "navName"
+  },
   "entries": {
-    "Class": {
-      "name": "Classe"
+    "Classroom - Black & White": {
+      "name": "Salle de classe - Noir et blanc",
+      "navName": "Salle de classe"
+    },
+    "Classroom - Color": {
+      "name": "Salle de classe - Couleur",
+      "navName": "Salle de classe"
     }
   }
 }
