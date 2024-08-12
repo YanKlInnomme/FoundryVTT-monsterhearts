@@ -304,6 +304,9 @@
       "Label": "Expérience",
       "Description": "Lorsque vous échouez à un jet ou lorsqu'un mouvement vous l'impose, marquez un point d'expérience. Puis lorsque vous avez rempli les cinq points d'expérience, vous pouvez choisir l'une des progressions. Une fois que vous avez choisi une progression, effacez les cinq points d'expérience et recommencez."
     },
+    "Advancement": {
+      "Label": "Progressions"
+    },
     "Advancement1": {
       "Label": "1ère progression"
     },

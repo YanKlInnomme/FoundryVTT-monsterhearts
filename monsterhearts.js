@@ -1,15 +1,3 @@
-Hooks.on('init', () => {
-  game.settings.register('monsterhearts', 'settings-override', {
-    name: game.i18n.localize("monsterhearts.Settings.Title"),
-    default: false,
-    type: Boolean,
-    scope: 'world',
-    config: true,
-    hint: game.i18n.localize("monsterhearts.Settings.Hint"),
-    requiresReload: true
-  });
-});
-
 Hooks.on('babele.init', () => {
   if (game.babele) {
     const lang = game.i18n.lang;
@@ -304,7 +292,8 @@ Hooks.once('pbtaSheetConfig', () => {
             customLabel: false,
             userLabel: false,
             type: "LongText",
-            value: ""
+            value: "",
+            playbook: true
           },
           darkestSelf: {
             position: "Top",
@@ -313,7 +302,8 @@ Hooks.once('pbtaSheetConfig', () => {
             customLabel: false,
             userLabel: false,
             type: "LongText",
-            value: ""
+            value: "",
+            playbook: true
           },
           harm: {
             position: "Left",
@@ -363,6 +353,16 @@ Hooks.once('pbtaSheetConfig', () => {
             value: 0,
             max: 5,
             steps: Array(5).fill(false)
+          },
+          advancement: {
+            position: "Left",
+            label: game.i18n.localize("MONSTERHEARTS.Advancement.Label"),
+            description: null,
+            customLabel: false,
+            userLabel: false,
+            type: "ListMany",
+            condition: false,
+            playbook: true
           },
           advancement1: {
             position: "Left",
