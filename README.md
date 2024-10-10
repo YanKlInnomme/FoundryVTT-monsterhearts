@@ -33,6 +33,16 @@ Ce module est un contenu créé par un fan avec l'autorisation des détenteurs d
 
 - **Foundry VTT** : Le projet est créé conformément à l'[accord de licence limitée de Foundry VTT concernant le développement de paquets](https://foundryvtt.com/article/license/).
 
+## Mentions légales et informations sur le module
+
+Ce module a été développé avec l'approbation de l'éditeur français Lapin Marteau et inclut les compendiums officiels français. J'ai veillé à ce que tout le contenu respecte les réglementations sur le droit d'auteur.
+
+Pour la version anglaise du module, veuillez noter que les détenteurs des droits anglais, Buried Without Ceremony, n'ont pas accordé l'autorisation d'inclure les compendiums officiels anglais. Par conséquent, ils ne sont pas présents dans cette version. Cependant, la feuille de personnage et les mécaniques de jeu restent disponibles, car elles sont basées sur le système Powered by the Apocalypse (PbtA). Ce système est ouvert, et ses mécaniques sont libres d'utilisation tant qu'aucun texte protégé par le droit d'auteur ou élément spécifique n'est reproduit.
+
+Vous trouverez donc une feuille de personnage complète en anglais, vous permettant d'utiliser les mécaniques de jeu de Monsterhearts tout en respectant les limites légales. Pour des informations détaillées sur les mouvements et d'autres contenus spécifiques, veuillez vous référer au livre de règles.
+
+Merci de votre compréhension, et bon jeu !
+
 ## Version 1.0.0
  * Première publication du module
 
@@ -62,6 +72,16 @@ This module is fan content created with the permission of the rights holders. It
 - **Source code**: All source code _(javascript, css, etc.)_ is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 - **Foundry VTT**: The project is created in accordance with the [Foundry VTT Limited License Agreement for Package Development](https://foundryvtt.com/article/license/).
+
+## Legal Notice and Module Information
+
+This module was developed with the approval of the French publisher Lapin Marteau and includes the official French compendiums. We have ensured that all content respects copyright regulations.
+
+For the English version of the module, please note that the English rights holders, Buried Without Ceremony, have not granted permission to include the official English compendiums. As a result, they are not present in this version. However, the character sheet and game mechanics remain available, as they are based on the Powered by the Apocalypse (PbtA) system. This system is open, and its mechanics are free to use as long as no copyrighted text or specific elements are reproduced.
+
+Therefore, you will find a complete character sheet in English, allowing you to use Monsterhearts game mechanics while respecting legal boundaries. For detailed information on moves and other specific content, please refer to the rulebook.
+
+Thank you for your understanding, and enjoy the game!
 
 ## Version 1.0.0
  * First release of the module
