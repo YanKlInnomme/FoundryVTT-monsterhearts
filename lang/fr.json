@@ -1,11 +1,5 @@
 {
-  "Powered by the Apocalypse": "Propulsé par l'Apocalypse",
   "TYPES": {
-    "Actor": {
-      "character": "Personnage",
-      "npc": "PNJ",
-      "other": "Autre"
-    },
     "Item": {
       "move": "Action",
       "npcMove": "Action de PNJ",
@@ -14,257 +8,6 @@
       "tag": "Étiquette"
     }
   },
-  "PBTA": {
-    "ActorType": "Type d'acteur",
-    "Advancement": "Avancement",
-    "AdvancementNumber": "Avancement {number}",
-    "Advantage": "Avantage",
-    "Ask": "Demander",
-    "AskTitle": "{name} : Choisissez une Stat",
-    "Attribute": "Attribut",
-    "Attributes": "Attributs",
-    "Biography": "Biographie",
-    "Category": "Catégorie",
-    "ClearMoves": "Effacer les actions",
-    "ChatMessage": {
-      "ShiftUp": "Déplacer vers le haut",
-      "ShiftDown": "Déplacer vers le bas"
-    },
-    "Choice": "Choix",
-    "Choices": "Choix",
-    "ConditionsApplied": "Conditions appliquées :",
-    "Create": "Créer",
-    "Description": "Description",
-    "Details": "Détails",
-    "Disadvantage": "Désavantage",
-    "DropItemsHere": "Déposer les éléments ici",
-    "Equipment": "Ressources",
-    "failure": "Complications (marquer XP)",
-    "Formula": "Lancer alternatif",
-    "Forward": "Au prochain",
-    "ItemGrantAdd": "Ajouter une dotation",
-    "ItemGrants": "Dotations",
-    "KeepItems": "Garder les éléments",
-    "Modifier": "Modificateur",
-    "MoveGroup": "Groupe d'actions",
-    "MoveGroupHelp": "Plusieurs actions avec le même groupe d'actions seront des sélections soit/ou lors de la création d'un nouveau personnage à l'aide du créateur de personnage.",
-    "Moves": "Actions",
-    "Name": "Nom",
-    "New": "Nouveau",
-    "Normal": "Normal",
-    "NoTemplate": "Aucun modèle",
-    "Ongoing": "En continu",
-    "Hold": "Retenue",
-    "partial": "Succès partiel",
-    "Playbook": "Mue",
-    "PlaybookGrantOn": "Accorder",
-    "PlaybookGrantOnAdvancement": "Lors de l'avancement",
-    "PlaybookGrantOnInstantly": "Instantanément",
-    "PlaybookAddNewListOption": "Ajouter une nouvelle option",
-    "Prompt": "Invite",
-    "PromptTitle": "{name} : Entrez un modificateur",
-    "Qty": "Qté",
-    "Quantity": "Quantité",
-    "Resource": "Ressource",
-    "RequiresMove": "Nécessite une action",
-    "Roll": "Lancer",
-    "RollFormula": "Formule de lancer",
-    "RollFormulaOverride": "Lancer alternatif",
-    "RollFormulaHardCap": "Le modificateur original, {value}, a été limité.",
-    "RollLabel": "Lancer {label}",
-    "RollMove": "Lancer action",
-    "RollMode": "Mode de lancer",
-    "RolledStat": "Stat : {stat}",
-    "SheetClassCharacter": "Feuille de personnage PbtA par défaut",
-    "SheetClassNPC": "Feuille de PNJ PbtA par défaut",
-    "SheetClassOther": "Feuille PbtA Autre par défaut",
-    "SheetClassItem": "Feuille d'objet PbtA par défaut",
-    "SheetClassPlaybook": "Feuille de mue PbtA par défaut",
-    "StartingGrants": "Dotations de départ",
-    "success": "Succès",
-    "Tags": "Étiquettes",
-    "TagsHelp": "(Utilisez la tabulation pour autocompléter, les virgules pour créer de nouvelles étiquettes et double-cliquez sur une étiquette pour la modifier)",
-    "TagsPlaceholder": "Écrire des étiquettes",
-    "Title": "Titre",
-    "title": "Propulsé par l'Apocalypse",
-    "Type": "Type",
-    "Uses": "Utilisations",
-    "ViewPlaybook": "Voir la mue",
-    "Weight": "Poids",
-    "Wt": "Pds",
-    "Common": {
-      "Description": "Description",
-      "Details": "Détails",
-      "Name": "Nom"
-    },
-    "Dialog": {
-      "Ask1": "Choisissez une statistique pour ce action.",
-      "ChooseConditions": "Choisissez tous les modificateurs conditionnels qui s'appliquent :",
-      "ChooseSituationalModifiersTitle": "Modificateurs situationnels",
-      "ChooseSituationalModifiers": "Choisissez tous les modificateurs situationnels qui s'appliquent :",
-      "ForwardMessage": "Utilisez <strong>{value}</strong> en avant.",
-      "OngoingMessage": "Utilisez <strong>{value}</strong> en cours.",
-      "HoldMessage": "Utilisez <strong>{value}</strong> à maintenir.",
-      "Prompt1": "Choisissez le modificateur pour ce action.",
-      "HowManyToken": "Combien de jetons souhaitez-vous utiliser ?",
-      "ErrorAboveMax": "Vous ne pouvez pas dépenser plus de jetons que vous n'en avez."
-    },
-    "Messages": {
-      "sheetConfig": {
-        "actorTypeRequired": "le type d'acteur est requis.",
-        "attribute": "Attribut",
-        "attributeMax": "doit inclure une propriété 'max'.",
-        "attributeOptions": "doit inclure un groupe 'options'",
-        "attributeOptionsEmpty": "doit inclure au moins une option dans le groupe 'options'.",
-        "attributeType": "doit être l'un des types suivants :",
-        "attributeTypeNull": "n'a pas de type (peut-être des options dont le parent a été renommé).",
-        "equipmentTypes": "est requis et doit avoir au moins un type d'équipement.",
-        "groupAttributes": "doit être un groupe d'attributs.",
-        "moveTypes": "est requis et doit avoir au moins un type de action.",
-        "noConfig": "Aucune configuration de feuille n'a été saisie.",
-        "overrideRemoved": "Remplacement des feuilles du module PbtA supprimé.",
-        "previousSettingRestored": "Paramètres de feuille PbtA précédents restaurés.",
-        "reset": "Réinitialiser la configuration de la feuille.",
-        "rollFormulaRequired": "'rollFormula' est requis.",
-        "rollResultsIncorrect": "'rollResults' saisis incorrectement.",
-        "rollResultsRequired": "'rollResults' est requis",
-        "statsRequired1": "'stats' sont requis pour",
-        "statsRequired2": "groupe.",
-        "statString1": "Stat",
-        "statString2": "doit être une chaîne, comme \"Cool\"",
-        "tomlError": "Il y a une erreur de syntaxe dans votre configuration TOML à la ligne {line}, colonne {column}. Voir la console pour plus de détails."
-      }
-    },
-    "Migration": {
-      "Begin": "Application de la migration du système PbtA pour la version {version}. Veuillez être patient et ne pas fermer votre jeu ni éteindre votre serveur.",
-      "Complete": "Migration du système PbtA vers la version {version} terminée !"
-    },
-    "Settings": {
-      "button": {
-        "help": "Aide et tutoriel du système"
-      },
-      "stats": {
-        "name": "Statistiques",
-        "hint": "Entrez une liste de statistiques/capacités séparées par des virgules, comme \"Str,Dex,Con,Int,Wis,Cha\""
-      },
-      "AutoCollapseCard": {
-        "name": "Réduire les descriptions des cartes d'éléments dans le chat",
-        "hint": "Réduit automatiquement les descriptions des cartes d'éléments dans le journal de discussion"
-      },
-      "AutoCollapseCardResult": {
-        "name": "Réduire les résultats des cartes d'éléments dans le chat",
-        "hint": "Réduit automatiquement les résultats des cartes d'éléments dans le journal de discussion"
-      },
-      "advForward": {
-        "name": "Réinitialiser ADV/DIS après les lancers",
-        "hint": "Si activé, les choix d'avantage et de désavantage sur la feuille de personnage seront réinitialisés à la normale après chaque lancer (similaire à Forward)."
-      },
-      "hideRollFormula": {
-        "name": "Masquer la formule de lancer",
-        "hint": "Masque la saisie de la formule de lancer personnalisée sur les feuilles de personnage."
-      },
-      "hideForward": {
-        "name": "Masquer l'avance",
-        "hint": "Masque la saisie de l'avance sur les feuilles de personnage."
-      },
-      "hideOngoing": {
-        "name": "Masquer en cours",
-        "hint": "Masque la saisie en cours sur les feuilles de personnage."
-      },
-      "hideHold": {
-        "name": "Masquer maintenir",
-        "hint": "Masque la saisie maintenir sur les feuilles de personnage."
-      },
-      "hideRollMode": {
-        "name": "Masquer le mode de lancer",
-        "hint": "Masque le remplacement du mode de lancer (normal/avantage/désavantage) sur les feuilles de personnage."
-      },
-      "hideUses": {
-        "name": "Masquer les utilisations",
-        "hint": "Masque les utilisations restantes pour chaque action sur le résumé des actions pour les personnages et les PNJ."
-      },
-      "itemIcons": {
-        "name": "Activer les icônes d'éléments",
-        "hint": "Activer les icônes visuelles pour les actions, sorts et équipements dans les feuilles de personnage (nécessite un rechargement du navigateur)."
-      },
-      "sheetConfig": {
-        "label": "Configuration de la feuille",
-        "name": "Configurer les feuilles de personnage",
-        "hint": "Choisissez la structure des données pour les feuilles de personnage, telles que les statistiques, les capacités et les détails.",
-        "additions": "Ajouts :",
-        "confirm": "Confirmer",
-        "confirmChanges": "Confirmer les changements",
-        "confirmUpdate": "Confirmer + Mettre à jour",
-        "cosmetic": "Changements cosmétiques (étiquette ou description) :",
-        "deletions": "Suppressions :",
-        "maxValue": "Valeur maximale modifiée :",
-        "noteCancel": "Annuler et empêcher l'enregistrement des modifications",
-        "noteChangesDetected": "Des modifications ont été détectées dans un ou plusieurs de vos types d'acteurs. Examinez les modifications ci-dessous, puis choisissez l'une des options suivantes :",
-        "noteConfirm": "Confirmer sans mettre à jour les acteurs existants",
-        "noteConfirmUpdate": "Confirmer et mettre à jour les acteurs existants",
-        "noteConfirmUpdateBold": "REMARQUE : Les données existantes dans les attributs supprimés seront supprimées définitivement",
-        "notes2": "Vous devez saisir les données de la feuille de personnage au format TOML. Écrire du TOML est similaire à travailler avec des fichiers .ini courants dans les paramètres de modding pour les jeux PC.",
-        "notes3": "Lisez la documentation liée ci-dessous avant de configurer votre feuille. Vous pouvez également vous rendre sur le canal #powered-by-the-apocalypse du principal Discord de Foundry Virtual Tabletop pour des questions et de l'assistance.",
-        "options": "Options de liste modifiées (les valeurs seront préservées) :",
-        "values": "Valeur dans la liste radio supprimée (la valeur sera réinitialisée au premier élément) :",
-        "resetDefaults": "Réinitialiser les paramètres par défaut",
-        "saveConfiguration": "Enregistrer la configuration",
-        "title": "Configuration de la feuille",
-        "type": "Type modifié :",
-        "typeReset": "Type modifié (l'attribut sera réinitialisé) :",
-        "sheetConfigDisabledModule": "La configuration de la feuille a été désactivée en raison d'un module qui la fournit."
-      },
-      "tagConfig": {
-        "label": "Configuration des étiquettes",
-        "name": "Configurer les étiquettes",
-        "hint": "Choisissez les étiquettes pour les personnages et les objets.",
-        "Labels": {
-          "Actors": "Étiquettes des acteurs",
-          "Items": "Étiquettes des objets",
-          "General": "Étiquettes générales",
-          "Module": "Étiquettes du module",
-          "World": "Étiquettes du monde",
-          "all": "Tous les {documentType}"
-        },
-        "title": "Configurer les étiquettes"
-      }
-    },
-    "Slug": {
-      "label": "ID PbtA",
-      "tooltip": "Régénérer l'ID PbtA"
-    },
-    "Stat": {
-      "label": "Stat",
-      "labelPl": "Stats",
-      "Shifting": {
-        "fail": "Échec du changement.",
-        "label": "Changement de {stat}",
-        "shifts": "{actor} change {stats}",
-        "up": "Changement de {stat} vers le haut",
-        "down": "Changement de {stat} vers le bas"
-      }
-    },
-    "Warnings": {
-      "Playbook": {
-        "ChoiceSetAlreadyGrant": "Le jeu de choix a déjà l'élément accordé.",
-        "DeleteWarning": "Ce {type} sera définitivement supprimé, ne pourra pas être récupéré et supprimera {num} éléments accordés.",
-        "ItemMissing": "Élément manquant",
-        "UpdateAttributes": "Il y a un décalage entre les attributs de cette mue et ceux disponibles pour ce type d'acteur. Vous pouvez cliquer sur cet avertissement pour mettre à jour les attributs, mais soyez conscient que les anciens attributs de cette mue pourraient être supprimés s'ils ne sont plus disponibles."
-      },
-      "Macro": {
-        "NoActorSelected": "Aucun acteur sélectionné ou assigné n'a pu être trouvé pour cibler avec la macro.",
-        "MissingTargetWarn": "Votre acteur contrôlé '{actor}' n'a pas d'objet avec le nom '{name}'.",
-        "MultipleTargetsWarn": "Votre acteur contrôlé '{actor}' a plus d'un objet avec le nom '{name}'. Le premier correspondant sera choisi."
-      },
-      "TagDeprecation": "Les étiquettes en tant qu'éléments ont été dépréciées, utilisez le menu de configuration des étiquettes dans les paramètres du jeu pour créer vos étiquettes.",
-      "UnlinkedToken": {
-        "Equipment": "Les ressources ne peuvent pas être réarrangées tant que ce jeton n'est pas lié à un acteur.",
-        "Moves": "Les actions ne peuvent pas être réarrangés tant que ce jeton n'est pas lié à un acteur."
-      }
-    }
-  },
-  "PBTA_OTHER": "Autre",  
-
   "MONSTERHEARTS": {
     "Links": {
       "Title": "Monsterhearts · Liens",
@@ -331,6 +74,15 @@
     "EquipmentTypes": {
       "Strings": "Ascendants",
       "SympatheticTokens": "Fétiches"
+    },
+    "GroupGenerator": {
+      "Title": "Générateur de groupe",
+      "Label": "Nombre de membres :",
+      "CreateActorsLabel": "Créer les fiches de personnage",
+      "Generate": "Générer",
+      "Cancel": "Annuler",
+      "GeneratedGroup": "Groupe généré :",
+      "CompendiumNotFound": "Compendium non trouvé :"
     }
   }
 }

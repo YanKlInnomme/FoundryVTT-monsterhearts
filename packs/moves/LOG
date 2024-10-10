@@ -1,7 +1,0 @@
-2024/08/12-15:33:48.883 12cbc Recovering log #138
-2024/08/12-15:33:48.886 12cbc Delete type=0 #138
-2024/08/12-15:33:48.886 12cbc Delete type=3 #136
-2024/08/12-15:41:10.012 c1cc Level-0 table #143: started
-2024/08/12-15:41:10.013 c1cc Level-0 table #143: 0 bytes OK
-2024/08/12-15:41:10.013 c1cc Delete type=0 #141
-2024/08/12-15:41:10.015 c1cc Manual compaction at level-0 from '!items!I9B2hd7ZgR29IOdX' @ 72057594037927935 : 1 .. '!items!tXoazkERE6NImURg' @ 0 : 0; will stop at (end)

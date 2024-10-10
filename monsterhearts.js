@@ -132,42 +132,64 @@ Hooks.on("updateActor", async (actor, data, options, userId) => {
 
 const hideAndRestrictCompendiums = () => {
   const currentLanguage = game.settings.get("core", "language");
-
   if (currentLanguage !== "fr") {
     const compendiumsToHide = [
-      "monsterhearts.skin-moves-",
-      "monsterhearts.skins-"
+      "monsterhearts.actions",
+      "monsterhearts.actions-de-la-mue-tbomh",
+      "monsterhearts.actions-des-mues",
+      "monsterhearts.actions-des-mues-ii",
+      "monsterhearts.aides-de-jeu",
+      "monsterhearts.maledictions",
+      "monsterhearts.mues",
+      "monsterhearts.mues-ii",
+      "monsterhearts.mue-tbomh",
+      "monsterhearts.pactes"
     ];
 
     compendiumsToHide.forEach(compendiumName => {
       const compendium = game.packs.get(compendiumName);
       if (compendium) {
+        // Cacher visuellement le compendium
         const compendiumElement = $(`.directory-item[data-pack='${compendium.collection}']`);
         if (compendiumElement.length) {
           compendiumElement.hide();
         }
 
+        // Restreindre l'accès aux documents du compendium
         const originalGetDocuments = compendium.getDocuments;
         compendium.getDocuments = async function (...args) {
           if (game.settings.get("core", "language") !== "fr") {
-            console.warn(`Accès restreint au compendium ${compendiumName}`);
+            console.log(`No access to the compendium ${compendiumName}`);
             return [];
           }
           return originalGetDocuments.apply(this, args);
         };
 
+        // Restreindre l'accès à l'index du compendium
         const originalGetIndex = compendium.getIndex;
         compendium.getIndex = async function (...args) {
           if (game.settings.get("core", "language") !== "fr") {
-            console.warn(`Accès restreint au compendium ${compendiumName}`);
+            console.log(`No access to the compendium ${compendiumName}`);
             return [];
           }
           return originalGetIndex.apply(this, args);
         };
       }
     });
-  }
+  };
 };
+
+// Exécuter la fonction au chargement du jeu
+Hooks.once('ready', () => {
+  hideAndRestrictCompendiums();
+});
+
+// Réexécuter la fonction lorsque la langue change
+Hooks.on('updateSetting', (setting, value) => {
+  if (setting.key === 'language') {
+    hideAndRestrictCompendiums();
+  }
+});
 
 Hooks.on('ready', () => {
   setTimeout(hideAndRestrictCompendiums, 1000);
@@ -176,6 +198,104 @@ Hooks.on('ready', () => {
 Hooks.on('renderCompendiumDirectory', () => {
   setTimeout(hideAndRestrictCompendiums, 1000);
 });
+
+
+const unlockCompendiumsWithPassword = () => {
+  const currentLanguage = game.settings.get("core", "language");
+  
+  if (currentLanguage !== "fr") return;
+
+  // Le mot de passe requis pour le groupe 1
+  const correctPasswordGroup1 = "mot_8_page_124";  // Remplacez par le 8ème mot de la page 124
+
+  // Définir les compendiums à cacher et protéger
+  const compendiumsToHide = [
+    { name: "monsterhearts.actions-des-mues-ii", group: 1 },
+    { name: "monsterhearts.mues-ii", group: 1 },
+    { name: "monsterhearts.skins", group: null } // Toujours verrouillé
+  ];
+
+  // Enregistrer les paramètres pour la saisie du mot de passe si la langue est le français
+  game.settings.register("monsterhearts", "group1Password", {
+    name: "Entrez le 8ème mot de la page 124",
+    hint: "pour déverrouiller le contenu issu du livre 'Volume 2'",
+    scope: "client",
+    config: currentLanguage === "fr",  // Afficher uniquement lorsque la langue est le français
+    type: String,
+    default: ""
+  });
+
+  // Obtenir le mot de passe fourni
+  const inputPasswordGroup1 = game.settings.get("monsterhearts", "group1Password");
+
+  // Fonction pour cacher, protéger et déverrouiller les compendiums
+  const protectCompendiums = () => {
+    compendiumsToHide.forEach(({ name, group }) => {
+      const compendium = game.packs.get(name);
+      if (!compendium) return;
+
+      // Obtenir l'élément de compendium dans la barre latérale
+      const compendiumElement = $(`.directory-item[data-pack='${compendium.collection}']`);
+
+      // Restreindre l'accès sauf si le mot de passe est correct
+      const originalGetDocuments = compendium.getDocuments;
+      const originalGetIndex = compendium.getIndex;
+
+      compendium.getDocuments = async function (...args) {
+        if (group === 1 && inputPasswordGroup1 !== correctPasswordGroup1) return [];
+        if (group === null) return []; // Toujours verrouillé
+        return originalGetDocuments.apply(this, args);
+      };
+
+      compendium.getIndex = async function (...args) {
+        if (group === 1 && inputPasswordGroup1 !== correctPasswordGroup1) return [];
+        if (group === null) return []; // Toujours verrouillé
+        return originalGetIndex.apply(this, args);
+      };
+
+      // Cacher visuellement le compendium si le mot de passe est incorrect ou verrouillé
+      if ((group === 1 && inputPasswordGroup1 !== correctPasswordGroup1) || 
+          group === null) {
+        if (compendiumElement.length) compendiumElement.hide();
+      } else {
+        // Afficher le compendium si le mot de passe correct est fourni
+        if (compendiumElement.length) compendiumElement.show();
+      }
+    });
+  };
+
+  // Exécuter la logique de protection à la charge du jeu
+  protectCompendiums();
+};
+
+// Hooks pour déclencher la fonction
+Hooks.once('ready', () => {
+  unlockCompendiumsWithPassword();
+});
+
+// Mettre à jour automatiquement les compendiums lors des mises à jour des paramètres
+Hooks.on('updateSetting', (setting, value) => {
+  if (setting.key === 'core.language' || setting.key === 'monsterhearts.group1Password') {
+    unlockCompendiumsWithPassword();
+  }
+});
+
+// Ajouter un hook pour forcer un rechargement complet de la page après la fermeture de la fenêtre des paramètres
+Hooks.on("renderSettingsConfig", (app, html, data) => {
+  html.find('button[type="submit"]').click(() => {
+    setTimeout(() => {
+      window.location.reload(); // Forcer un rechargement complet de la page après la sauvegarde des paramètres
+    }, 500); // Ajouter un petit délai pour s'assurer que les paramètres sont d'abord enregistrés
+  });
+});
+
+// Également déclencher après le chargement avec un délai pour attraper d'éventuels retards de chargement initiaux
+Hooks.on('ready', () => {
+  setTimeout(unlockCompendiumsWithPassword, 1000);
+});
+
+
+
 
 Hooks.once('ready', async function() {
   const journalEntryUuid = "Compendium.monsterhearts.sources-and-credits.JournalEntry.kgKyp984r139nDwK";

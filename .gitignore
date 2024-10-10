@@ -6,3 +6,7 @@
 *.afdesign
 *.psd
 *.old
+
+# Les anciens fichiers eng/fr
+/compendium/fr/old
+/packs/old

@@ -43,53 +43,74 @@
   ],
   "packs": [
     {
-      "label": "Bargains",
-      "name": "bargains",
+      "label": "Actions",
+      "name": "actions",
       "type": "Item",
       "system": "pbta",
-      "path": "packs/bargains"
+      "path": "packs/actions"
     },
     {
-      "label": "Hexes",
-      "name": "hexes",
+      "label": "Actions de la mue TBoMH",
+      "name": "actions-de-la-mue-tbomh",
       "type": "Item",
       "system": "pbta",
-      "path": "packs/hexes"
+      "path": "packs/actions-de-la-mue-tbomh"
     },
     {
-      "label": "Moves",
-      "name": "moves",
+      "label": "Actions des Mues",
+      "name": "actions-des-mues",
       "type": "Item",
       "system": "pbta",
-      "path": "packs/moves"
+      "path": "packs/actions-des-mues"
     },
     {
-      "label": "Skin moves",
-      "name": "skin-moves",
+      "label": "Actions des Mues II",
+      "name": "actions-des-mues-ii",
       "type": "Item",
       "system": "pbta",
-      "path": "packs/skin-moves"
+      "path": "packs/actions-des-mues-ii"
     },
     {
-      "label": "Skin moves +",
-      "name": "skin-moves-",
-      "type": "Item",
+      "label": "Aides de jeu",
+      "name": "aides-de-jeu",
+      "type": "Macro",
       "system": "pbta",
-      "path": "packs/skin-moves-"
+      "path": "packs/aides-de-jeu"
     },
     {
-      "label": "Skins",
-      "name": "skins",
+      "label": "Malédictions",
+      "name": "maledictions",
       "type": "Item",
       "system": "pbta",
-      "path": "packs/skins"
+      "path": "packs/maledictions"
     },
     {
-      "label": "Skins +",
-      "name": "skins-",
+      "label": "Mues",
+      "name": "mues",
       "type": "Item",
       "system": "pbta",
-      "path": "packs/skins-"
+      "path": "packs/mues"
+    },
+    {
+      "label": "Mues II",
+      "name": "mues-ii",
+      "type": "Item",
+      "system": "pbta",
+      "path": "packs/mues-ii"
+    },
+    {
+      "label": "Mue TBoMH",
+      "name": "mue-tbomh",
+      "type": "Item",
+      "system": "pbta",
+      "path": "packs/mue-tbomh"
+    },
+    {
+      "label": "Pactes",
+      "name": "pactes",
+      "type": "Item",
+      "system": "pbta",
+      "path": "packs/pactes"
     },
     {
       "label": "Scenes",
