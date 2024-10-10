@@ -6,7 +6,13 @@
 
 Ce module est une adaptation du jeu de rôle Monsterhearts pour Foundry VTT. Il fonctionne de paire avec le système Powered by the Apocalypse d'Asacolips.
 
-Si vous appréciez le module et que vous avez les moyens de le faire, vous pouvez me soutenir en m'offrant un café sur Buy Me a Coffee (https://www.buymeacoffee.com/yank). Votre geste serait grandement apprécié et contribuerait à soutenir le développement continu. Quoi qu'il en soit, je vous souhaite une expérience enrichissante et divertissante. N'hésitez pas à me contacter pour partager vos commentaires ou signaler tout problème éventuel.
+![Capture d'écran 2024-10-08 144608](https://github.com/user-attachments/assets/b1cac025-c993-46c0-ae67-21574b4cae0a)
+![Capture d'écran 2024-10-08 144719](https://github.com/user-attachments/assets/8e20b1ca-a513-4617-b062-9bea8ad25abf)
+![Capture d'écran 2024-10-08 145459](https://github.com/user-attachments/assets/48bb74fb-5304-437c-b2ac-1e6125f86df7)
+![Capture d'écran 2024-10-10 094913](https://github.com/user-attachments/assets/54ad5904-6f12-4c4b-b0a1-afd3bfeab2ee)
+![Capture d'écran 2024-10-08 145319](https://github.com/user-attachments/assets/a6d772de-28fa-4a0b-8eb8-9d90a9372c50)
+
+Si vous appréciez le module et que vous avez les moyens de le faire, vous pouvez me soutenir en m'offrant un café sur Buy Me a Coffee (https://www.buymeacoffee.com/yank). Votre geste sera grandement apprécié et contribuera à soutenir le développement continu. Quoi qu'il en soit, je vous souhaite une expérience enrichissante et divertissante. N'hésitez pas à me contacter pour partager vos commentaires ou signaler tout problème éventuel.
 
 ## Prérequis
 
