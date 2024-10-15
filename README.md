@@ -6,9 +6,9 @@
 
 Ce module est une adaptation du jeu de rôle Monsterhearts pour Foundry VTT. Il fonctionne de paire avec le système Powered by the Apocalypse d'Asacolips.
 
-![Capture d'écran 2024-10-08 144608](https://github.com/user-attachments/assets/b1cac025-c993-46c0-ae67-21574b4cae0a)
+![Capture d'écran 2024-10-15 171355](https://github.com/user-attachments/assets/d43653cd-458e-45ad-adec-8e881e51872b)
 ![Capture d'écran 2024-10-08 144719](https://github.com/user-attachments/assets/8e20b1ca-a513-4617-b062-9bea8ad25abf)
-![Capture d'écran 2024-10-08 145459](https://github.com/user-attachments/assets/48bb74fb-5304-437c-b2ac-1e6125f86df7)
+![Capture d'écran 2024-10-15 172355](https://github.com/user-attachments/assets/56717dd4-8409-4344-8af6-bae308fa99c4)
 ![Capture d'écran 2024-10-10 094913](https://github.com/user-attachments/assets/54ad5904-6f12-4c4b-b0a1-afd3bfeab2ee)
 ![Capture d'écran 2024-10-08 145319](https://github.com/user-attachments/assets/a6d772de-28fa-4a0b-8eb8-9d90a9372c50)
 
