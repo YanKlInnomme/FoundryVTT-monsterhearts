@@ -3,10 +3,14 @@
     "Item": {
       "move": "Action",
       "npcMove": "Action de PNJ",
-      "equipment": "Équipement",
+      "equipment": "Ressources",
       "playbook": "Mue",
       "tag": "Étiquette"
     }
+  },
+  "PBTA": {
+    "Moves": "Actions",
+    "Equipment": "Ressources"
   },
   "MONSTERHEARTS": {
     "Links": {

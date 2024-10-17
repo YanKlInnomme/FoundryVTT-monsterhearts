@@ -43,6 +43,9 @@ Vous trouverez donc une feuille de personnage complète en anglais, vous permett
 
 Merci de votre compréhension, et bon jeu !
 
+## Version 1.0.1
+ * Corrections mineures (traductions et manifeste)
+
 ## Version 1.0.0
  * Première publication du module
 
@@ -52,7 +55,7 @@ Merci de votre compréhension, et bon jeu !
 
 This module is an adaptation of the Monsterhearts role-playing game for Foundry VTT. It works in pair with the Powered by the Apocalypse system by Asacolips.
 
-If you enjoy the module and have the means to do so, you can support me by buying me a coffee on Buy Me a Coffee (https://www.buymeacoffee.com/yank). Your gesture would be greatly appreciated and would help support ongoing development. In any case, I wish you a rewarding and entertaining experience. Feel free to contact me to share your feedback or report any issues.
+If you enjoy the module and have the means to do so, you can support me by buying me a coffee on Buy Me a Coffee (https://www.buymeacoffee.com/yank). Your gesture will be greatly appreciated and will help support ongoing development. In any case, I wish you a rewarding and entertaining experience. Feel free to contact me to share your feedback or report any issues.
 
 ## Prerequisites
 
@@ -82,6 +85,9 @@ For the English version of the module, please note that the English rights holde
 Therefore, you will find a complete character sheet in English, allowing you to use Monsterhearts game mechanics while respecting legal boundaries. For detailed information on moves and other specific content, please refer to the rulebook.
 
 Thank you for your understanding, and enjoy the game!
+
+## Version 1.0.1
+ * Minor corrections (translations and manifest)
 
 ## Version 1.0.0
  * First release of the module
