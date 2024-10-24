@@ -1,10 +1,10 @@
 *.lock                 
 # Ignore les fichiers de verrouillage Foundry VTT
 
-**/_source/            
+**\_source\            
 # Ignore tous les dossiers "_source"
 
-**/sources/            
+**\sources\            
 # Ignore tous les dossiers "sources"
 
 *.afdesign             
@@ -13,7 +13,7 @@
 *.psd                  
 # Ignore tous les fichiers .psd
 
-**/old/                
+**\old\                
 # Ignore tous les dossiers "old"
 
 *.old                  
