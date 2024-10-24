@@ -143,7 +143,8 @@ const hideAndRestrictCompendiums = () => {
       "monsterhearts.mues",
       "monsterhearts.mues-ii",
       "monsterhearts.mue-tbomh",
-      "monsterhearts.pactes"
+      "monsterhearts.pactes",
+      "monsterhearts.sources-et-credits"
     ];
 
     compendiumsToHide.forEach(compendiumName => {
@@ -170,6 +171,43 @@ const hideAndRestrictCompendiums = () => {
         compendium.getIndex = async function (...args) {
           if (game.settings.get("core", "language") !== "fr") {
             console.log(`No access to the compendium ${compendiumName}`);
+            return [];
+          }
+          return originalGetIndex.apply(this, args);
+        };
+      }
+    });
+  };
+  if (currentLanguage == "fr") {
+    const compendiumsToHide = [
+      "monsterhearts.sources-and-credits",
+      "monsterhearts.game-aids"
+    ];
+
+    compendiumsToHide.forEach(compendiumName => {
+      const compendium = game.packs.get(compendiumName);
+      if (compendium) {
+        // Cacher visuellement le compendium
+        const compendiumElement = $(`.directory-item[data-pack='${compendium.collection}']`);
+        if (compendiumElement.length) {
+          compendiumElement.hide();
+        }
+
+        // Restreindre l'accès aux documents du compendium
+        const originalGetDocuments = compendium.getDocuments;
+        compendium.getDocuments = async function (...args) {
+          if (game.settings.get("core", "language") == "fr") {
+            console.log(`Pas d'accès au compendium ${compendiumName}`);
+            return [];
+          }
+          return originalGetDocuments.apply(this, args);
+        };
+
+        // Restreindre l'accès à l'index du compendium
+        const originalGetIndex = compendium.getIndex;
+        compendium.getIndex = async function (...args) {
+          if (game.settings.get("core", "language") == "fr") {
+            console.log(`Pas d'accès au compendium ${compendiumName}`);
             return [];
           }
           return originalGetIndex.apply(this, args);
@@ -294,15 +332,15 @@ Hooks.on('ready', () => {
   setTimeout(unlockCompendiumsWithPassword, 1000);
 });
 
-
-
-
 Hooks.once('ready', async function() {
-  const journalEntryUuid = "Compendium.monsterhearts.sources-and-credits.JournalEntry.kgKyp984r139nDwK";
+  const journalEntryUuidFrench = "Compendium.monsterhearts.sources-et-credits.JournalEntry.4tyMVpJxQSbXLmvO";
+  const journalEntryUuidEnglish = "Compendium.monsterhearts.sources-and-credits.JournalEntry.kgKyp984r139nDwK";
   const delay = 2000;
 
   setTimeout(async () => {
     try {
+      // Check if the language is French or not
+      const journalEntryUuid = game.i18n.lang === 'fr' ? journalEntryUuidFrench : journalEntryUuidEnglish;
       const journalEntry = await fromUuid(journalEntryUuid);
 
       if (journalEntry) {

@@ -75,6 +75,15 @@
     "EquipmentTypes": {
       "Strings": "Strings",
       "SympatheticTokens": "Sympathetic tokens"
+    },
+    "GroupGenerator": {
+      "Title": "Group generator",
+      "Label": "Number of members :",
+      "CreateActorsLabel": "Creating character sheets",
+      "Generate": "Generate",
+      "Cancel": "Cancel",
+      "GeneratedGroup": "Group generated :",
+      "CompendiumNotFound": "Compendium not found :"
     }
   }
 }

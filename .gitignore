@@ -1,12 +1,20 @@
-# Le fichier de vérouillage de Foundry VTT
-*.lock
+*.lock                 
+# Ignore les fichiers de verrouillage Foundry VTT
 
-# Les sources graphiques
-/sources
-*.afdesign
-*.psd
-*.old
+**/_source/            
+# Ignore tous les dossiers "_source"
 
-# Les anciens fichiers eng/fr
-/compendium/fr/old
-/packs/old
+**/sources/            
+# Ignore tous les dossiers "sources"
+
+*.afdesign             
+# Ignore tous les fichiers .afdesign
+
+*.psd                  
+# Ignore tous les fichiers .psd
+
+**/old/                
+# Ignore tous les dossiers "old"
+
+*.old                  
+# Ignore tous les fichiers avec l'extension .old

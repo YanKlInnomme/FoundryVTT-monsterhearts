@@ -43,6 +43,12 @@ Vous trouverez donc une feuille de personnage complète en anglais, vous permett
 
 Merci de votre compréhension, et bon jeu !
 
+## Version 1.1.1
+ * Correction de textes pour l'action de mue 'Le rideau tombe'
+ * Répartition et affichage selon la langue des sources PDF
+ * Modification de la macro 'Générateur de groupe' pour prendre en compte les mues disponibles dans l'onglet 'Objets'
+ * Ajout du compendium 'Game aids' comprenant la macro 'Group generator' (version anglaise du compendium 'Aides de jeu')
+
 ## Version 1.0.1
  * Corrections mineures (traductions et manifeste)
 
@@ -85,6 +91,12 @@ For the English version of the module, please note that the English rights holde
 Therefore, you will find a complete character sheet in English, allowing you to use Monsterhearts game mechanics while respecting legal boundaries. For detailed information on moves and other specific content, please refer to the rulebook.
 
 Thank you for your understanding, and enjoy the game!
+
+## Version 1.1.1
+ * Text corrections for the 'Le rideau tombe' move
+ * Distribution and display according to the language of the PDF sources
+ * Modification of the 'Générateur de groupe' macro to take into account the skins available in the 'Items' tab
+ * Addition of the 'Game aids' compendium including the 'Group generator' macro (English version of the 'Aides de jeu' compendium)
 
 ## Version 1.0.1
  * Minor corrections (translations and manifest)

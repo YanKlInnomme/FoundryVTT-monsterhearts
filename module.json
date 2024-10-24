@@ -2,7 +2,7 @@
   "id": "monsterhearts",
   "title": "Monsterhearts (PbtA)",
   "description": "This module is an adaptation of the role-playing game Monsterhearts for Foundry VTT. It works in conjunction with Asacolips' Powered by the Apocalypse system.",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "license": "LICENSE",
   "compatibility": {
     "minimum": "12",
@@ -78,6 +78,13 @@
       "path": "packs/aides-de-jeu"
     },
     {
+      "label": "Game aids",
+      "name": "game-aids",
+      "type": "Macro",
+      "system": "pbta",
+      "path": "packs/game-aids"
+    },
+    {
       "label": "Malédictions",
       "name": "maledictions",
       "type": "Item",
@@ -125,6 +132,13 @@
       "type": "JournalEntry",
       "system": "pbta",
       "path": "packs/sources-and-credits"
+    },
+    {
+      "label": "Sources & Crédits",
+      "name": "sources-et-credits",
+      "type": "JournalEntry",
+      "system": "pbta",
+      "path": "packs/sources-et-credits"
     }
   ],
   "languages": [
