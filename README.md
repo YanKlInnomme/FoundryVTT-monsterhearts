@@ -12,6 +12,8 @@ Ce module est une adaptation du jeu de rôle Monsterhearts pour Foundry VTT. Il 
 ![Capture d'écran 2024-10-10 094913](https://github.com/user-attachments/assets/54ad5904-6f12-4c4b-b0a1-afd3bfeab2ee)
 ![Capture d'écran 2024-10-08 145319](https://github.com/user-attachments/assets/a6d772de-28fa-4a0b-8eb8-9d90a9372c50)
 
+https://tube.portes-imaginaire.org/w/pX2TefKTS7mAKjxWqK4VuX
+
 Si vous appréciez le module et que vous avez les moyens de le faire, vous pouvez me soutenir en m'offrant un café sur Buy Me a Coffee (https://www.buymeacoffee.com/yank). Votre geste sera grandement apprécié et contribuera à soutenir le développement continu. Quoi qu'il en soit, je vous souhaite une expérience enrichissante et divertissante. N'hésitez pas à me contacter pour partager vos commentaires ou signaler tout problème éventuel.
 
 ## Prérequis
