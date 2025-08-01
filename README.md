@@ -2,36 +2,9 @@
 
 **See below for the English version**
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px; background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4); background-size: 400% 400%; animation: gradient 15s ease infinite; border-radius: 15px; margin: 20px 0;">
-  <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 10px; overflow: hidden; transform: perspective(1000px) rotateX(5deg); transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.2);">
-    <img src="https://github.com/user-attachments/assets/69eb895e-4d72-449c-8211-42f0b19d12f6" alt="Interface" style="width: 100%; height: 150px; object-fit: cover;" />
-    <div style="padding: 15px; color: white; font-weight: bold; text-align: center;">Interface principale</div>
-  </div>
-  <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 10px; overflow: hidden; transform: perspective(1000px) rotateX(5deg); transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.2);">
-    <img src="https://github.com/user-attachments/assets/3ac69520-1b94-44bd-b61a-1b9301578334" alt="Feuille" style="width: 100%; height: 150px; object-fit: cover;" />
-    <div style="padding: 15px; color: white; font-weight: bold; text-align: center;">Feuille de personnage</div>
-  </div>
-  <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 10px; overflow: hidden; transform: perspective(1000px) rotateX(5deg); transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.2);">
-    <img src="https://github.com/user-attachments/assets/6281ef89-896d-40ba-ad58-5bd68cbf40c8" alt="Système" style="width: 100%; height: 150px; object-fit: cover;" />
-    <div style="padding: 15px; color: white; font-weight: bold; text-align: center;">Système de jeu</div>
-  </div>
-  <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 10px; overflow: hidden; transform: perspective(1000px) rotateX(5deg); transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.2);">
-    <img src="https://github.com/user-attachments/assets/04d5a3c1-cf4f-4d3d-baaa-42af97349747" alt="Compendiums" style="width: 100%; height: 150px; object-fit: cover;" />
-    <div style="padding: 15px; color: white; font-weight: bold; text-align: center;">Compendiums</div>
-  </div>
-</div>
-<style>
-@keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-</style>
-</div>
+# Module monsterhearts pour Foundry VTT
 
-| Interface principale | Feuille de personnage | Système de jeu | Compendiums |
-|:---:|:---:|:---:|:---:|
-| ![Screenshot 1](https://github.com/user-attachments/assets/69eb895e-4d72-449c-8211-42f0b19d12f6) | ![Screenshot 2](https://github.com/user-attachments/assets/3ac69520-1b94-44bd-b61a-1b9301578334) | ![Screenshot 3](https://github.com/user-attachments/assets/6281ef89-896d-40ba-ad58-5bd68cbf40c8) | ![Screenshot 4](https://github.com/user-attachments/assets/04d5a3c1-cf4f-4d3d-baaa-42af97349747) |
+Ce module est une adaptation du jeu de rôle Monsterhearts pour Foundry VTT. Il fonctionne de paire avec le système Powered by the Apocalypse d'Asacolips.
 
 <img width="1919" height="1051" alt="Capture d'écran 2025-08-01 150055" src="https://github.com/user-attachments/assets/69eb895e-4d72-449c-8211-42f0b19d12f6" />
 <img width="1919" height="1005" alt="Capture d'écran 2025-08-01 151611" src="https://github.com/user-attachments/assets/3ac69520-1b94-44bd-b61a-1b9301578334" />
@@ -40,11 +13,6 @@
 <img width="1919" height="1006" alt="Capture d'écran 2025-08-01 151953" src="https://github.com/user-attachments/assets/365641b0-4d0b-4979-b889-7addc666bbcd" />
 <img width="1919" height="1006" alt="Capture d'écran 2025-08-01 150629" src="https://github.com/user-attachments/assets/bbab7940-eb9d-44ed-8e12-18f96381caf5" />
 <img width="1919" height="1005" alt="Capture d'écran 2025-08-01 150812" src="https://github.com/user-attachments/assets/4e3a032c-5fc4-4edf-acb1-b20fd0cc43fb" />
-
-# Module monsterhearts pour Foundry VTT
-
-Ce module est une adaptation du jeu de rôle Monsterhearts pour Foundry VTT. Il fonctionne de paire avec le système Powered by the Apocalypse d'Asacolips.
-
 
 Si vous appréciez le module et que vous avez les moyens de le faire, vous pouvez me soutenir en m'offrant un café sur Buy Me a Coffee (https://www.buymeacoffee.com/yank). Votre geste sera grandement apprécié et contribuera à soutenir le développement continu. Quoi qu'il en soit, je vous souhaite une expérience enrichissante et divertissante. N'hésitez pas à me contacter pour partager vos commentaires ou signaler tout problème éventuel.
 
@@ -76,6 +44,10 @@ Pour la version anglaise du module, veuillez noter que les détenteurs des droit
 Vous trouverez donc une feuille de personnage complète en anglais, vous permettant d'utiliser les mécaniques de jeu de Monsterhearts tout en respectant les limites légales. Pour des informations détaillées sur les mouvements et d'autres contenus spécifiques, veuillez vous référer au livre de règles.
 
 Merci de votre compréhension, et bon jeu !
+
+## Version 2.0.0
+ * Mise à jour pour Foundry VTT v13 (Nouvelle interface, Mode sombre/clair, Liens communautaires, etc.)
+ * Ajout d'une option pour activer/désactiver une image de fond personnalisée pour l'écran de connexion
 
 ## Version 1.1.1
  * Correction de textes pour l'action de mue 'Le rideau tombe'
@@ -125,6 +97,10 @@ For the English version of the module, please note that the English rights holde
 Therefore, you will find a complete character sheet in English, allowing you to use Monsterhearts game mechanics while respecting legal boundaries. For detailed information on moves and other specific content, please refer to the rulebook.
 
 Thank you for your understanding, and enjoy the game!
+
+## Version 2.0.0
+ * Update for Foundry VTT v13 (New interface, Dark/Light mode, Community links, etc.)
+ * Added an option to enable/disable a custom background image for the login screen
 
 ## Version 1.1.1
  * Text corrections for the 'Le rideau tombe' move
