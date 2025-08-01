@@ -244,7 +244,7 @@ const unlockCompendiumsWithPassword = () => {
   if (currentLanguage !== "fr") return;
 
   // Le mot de passe requis pour le groupe 1
-  const correctPasswordGroup1 = "mot_8_page_124";  // Remplacez par le 8ème mot de la page 124
+  const correctPasswordGroup1 = "puis";
 
   // Définir les compendiums à cacher et protéger
   const compendiumsToHide = [
@@ -320,11 +320,14 @@ Hooks.on('updateSetting', (setting, value) => {
 
 // Ajouter un hook pour forcer un rechargement complet de la page après la fermeture de la fenêtre des paramètres
 Hooks.on("renderSettingsConfig", (app, html, data) => {
-  html.find('button[type="submit"]').click(() => {
-    setTimeout(() => {
-      window.location.reload(); // Forcer un rechargement complet de la page après la sauvegarde des paramètres
-    }, 500); // Ajouter un petit délai pour s'assurer que les paramètres sont d'abord enregistrés
-  });
+  const submitButton = html.querySelector('button[type="submit"]');
+  if (submitButton) {
+    submitButton.addEventListener("click", () => {
+      setTimeout(() => {
+        window.location.reload();
+      }, 500);
+    });
+  }
 });
 
 // Également déclencher après le chargement avec un délai pour attraper d'éventuels retards de chargement initiaux
@@ -332,19 +335,288 @@ Hooks.on('ready', () => {
   setTimeout(unlockCompendiumsWithPassword, 1000);
 });
 
+Hooks.on("renderSettings", addMonsterheartsLinksToSettings);
+
+function addMonsterheartsLinksToSettings(app, html) {
+  const gameSettingsHeader = html.querySelector("h4.divider");
+  if (!gameSettingsHeader) {
+    console.error("No header <h4.divider> found in parameters");
+    return;
+  }
+
+  const currentLang = game.i18n.lang;
+
+  const logoMap = {
+    "fr": {
+      "light": "logo-fr.svg",
+      "dark": "logo-fr-dark.svg"
+    }
+  };
+
+  const defaultLogos = {
+    "light": "logo.svg",
+    "dark": "logo-dark.svg"
+  };
+
+  function getCurrentTheme() {
+    if (html.classList.contains("theme-dark")) return "dark";
+    if (html.classList.contains("theme-light")) return "light";
+    return game.settings.get("core", "uiConfig")?.colorScheme?.interface || "light";
+  }
+
+  function getLogoPath() {
+    const theme = getCurrentTheme();
+
+    let logoFile;
+    if (logoMap[currentLang]?.[theme]) {
+      logoFile = logoMap[currentLang][theme];
+    } else if (logoMap[currentLang]) {
+      logoFile = logoMap[currentLang]["light"] || Object.values(logoMap[currentLang])[0];
+    } else {
+      logoFile = defaultLogos[theme] || defaultLogos["light"];
+    }
+
+    return `modules/monsterhearts/img/${logoFile}`;
+  }
+
+  // Création de la section personnalisée
+  const section = document.createElement("section");
+  section.classList.add("settings", "flexcol");
+
+  section.innerHTML = `
+    <h4 class="divider">${game.i18n.localize("MONSTERHEARTS.Links.Title")}</h4>
+    <div class="k4lt system-badge">
+      <img class="mh-dynamic-logo" src="${getLogoPath()}">
+    </div>
+  `;
+
+  const linkKeys = [
+    { icon: "fa-solid fa-cart-shopping", key: "Shop" },
+    { icon: "fab fa-github", key: "Git" },
+    { icon: "fa-regular fa-mug-hot fa-bounce", key: "Donation" }
+  ];
+
+  for (let i = 0; i < linkKeys.length; i++) {
+    const link = linkKeys[i];
+    const localizedText = game.i18n.localize(`MONSTERHEARTS.Links.${link.key}Title`);
+    const localizedURL = game.i18n.localize(`MONSTERHEARTS.Links.${link.key}URL`);
+    const linkSection = document.createElement("section");
+    linkSection.classList.add("settings", "flexcol");
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.innerHTML = `<i class="${link.icon}"></i> ${localizedText} <sup><i class="fa-light fa-up-right-from-square"></i></sup>`;
+
+    if (i === linkKeys.length - 1) {
+      button.style.marginBottom = "1rem";
+    }
+
+    button.addEventListener("click", ev => {
+      ev.preventDefault();
+      window.open(localizedURL, "_blank");
+    });
+
+    linkSection.appendChild(button);
+    section.appendChild(linkSection);
+  }
+
+  gameSettingsHeader.parentNode.insertBefore(section, gameSettingsHeader);
+
+  // Observer pour changer le logo selon thème
+  const logoImg = section.querySelector(".mh-dynamic-logo");
+  const observer = new MutationObserver(() => {
+    const newSrc = getLogoPath();
+    if (logoImg.getAttribute("src") !== newSrc) {
+      logoImg.setAttribute("src", newSrc);
+    }
+  });
+  observer.observe(html, { attributes: true, attributeFilter: ["class"] });
+}
+
+Hooks.once("ready", async function () {
+  // Définir une image personnalisée pour l'écran de connexion
+  if (!game.user.isGM) return;
+  
+  // Enregistrer le paramètre firstTime s'il n'existe pas déjà
+  game.settings.register("monsterhearts", "firstTime", {
+    name: game.i18n.localize("MONSTERHEARTS.Settings.firstTime.name"),
+    hint: game.i18n.localize("MONSTERHEARTS.Settings.firstTime.hint"),
+    scope: "world",
+    config: false,
+    type: Boolean,
+    default: true
+  });
+
+  // Enregistrer le paramètre enableLoginImg s'il n'existe pas déjà
+  game.settings.register("monsterhearts", "enableLoginImg", {
+    name: game.i18n.localize("MONSTERHEARTS.Settings.enableLoginImg.name"),
+    hint: game.i18n.localize("MONSTERHEARTS.Settings.enableLoginImg.hint"),
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: false,
+    onChange: value => {
+      // Appliquer ou restaurer l'image selon la valeur
+      applyOrRestoreLoginImage(value);
+    }
+  });
+
+  // Enregistrer le paramètre pour sauvegarder l'image de fond précédente
+  game.settings.register("monsterhearts", "originalBackground", {
+    name: "Original background image",
+    hint: "Save previous background image",
+    scope: "world",
+    config: false,
+    type: String,
+    default: null
+  });
+
+  // Fonction pour appliquer ou restaurer l'image de connexion
+  async function applyOrRestoreLoginImage(enable) {
+    let backgroundPath;
+    
+    if (enable) {
+      // Sauvegarder l'image actuelle avant de la changer
+      const currentBackground = game.world.background || "";
+      if (currentBackground && currentBackground !== `modules/monsterhearts/img/cover.webp`) {
+        await game.settings.set("monsterhearts", "originalBackground", currentBackground);
+      }
+      backgroundPath = `modules/monsterhearts/img/cover.webp`;
+    } else {
+      // Restaurer l'image précédente
+      backgroundPath = game.settings.get("monsterhearts", "originalBackground") || null;
+    }
+
+    // CORRECTION : Utiliser l'API Setup de Foundry v13
+    try {
+      console.log("Attempting to modify with the Setup API...");
+      
+      // Méthode 1: Utiliser l'API Setup (recommandée pour v13)
+      const response = await foundry.utils.fetchWithTimeout("/setup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          action: "editWorld",
+          id: game.world.id,
+          background: backgroundPath
+        })
+      });
+      
+      if (response.ok) {
+        console.log(`Background image ${enable ? 'applied' : 'restored'} : ${backgroundPath}`);
+        console.log("Please refresh the page to see the changes or reconnect to the world.");
+      } else {
+        throw new Error(`Réponse HTTP ${response.status}`);
+      }
+      
+    } catch (error) {
+      console.error("Error with API Setup:", error);
+      
+      // Méthode de fallback 1: Socket
+      try {
+        console.log("Attempt with socket...");
+        const socketResponse = await game.socket.emit("manageWorld", {
+          action: "editWorld",
+          worldId: game.world.id,
+          updateData: { background: backgroundPath }
+        });
+        console.log(`Background image ${enable ? 'applied' : 'restored'} via socket : ${backgroundPath}`);
+      } catch (socketError) {
+        console.error("Error with socket:", socketError);
+        
+        // Méthode de fallback 2: Document update
+        try {
+          console.log("Attempt with update document...");
+          await game.world.update({ background: backgroundPath });
+          console.log(`Background image ${enable ? 'applied' : 'restored'} via document : ${backgroundPath}`);
+        } catch (docError) {
+          console.error("Error with document update:", docError);
+          
+          // Information pour l'utilisateur
+          ui.notifications.warn("Unable to change image automatically. Please go to Edit World > Background Image and change the background image manually.");
+        }
+      }
+    }
+  }
+
+  if (game.settings.get("monsterhearts", "firstTime")) {
+    game.settings.set("monsterhearts", "firstTime", false);
+    
+    const callback = async () => {
+      // Sauvegarder l'image actuelle avant de la changer
+      const currentBackground = game.world.background || "";
+      if (currentBackground) {
+        await game.settings.set("monsterhearts", "originalBackground", currentBackground);
+        console.log("Original background image saved :", currentBackground);
+      }
+      
+      await game.settings.set("monsterhearts", "enableLoginImg", true);
+      // L'onChange callback se chargera d'appliquer l'image
+    };
+
+    // Créer la boîte de dialogue de confirmation avec prévisualisation
+    foundry.applications.api.DialogV2.confirm({
+      window: {
+        title: game.i18n.localize("MONSTERHEARTS.Settings.startup.dialog.title"),
+        width: 500,
+        height: "auto"
+      },
+      content: `
+        <div style="text-align: center;">
+          <div>
+            <img src="modules/monsterhearts/img/cover.webp" 
+                 style="max-width: 400px; max-height: 250px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);" 
+                 alt="${game.i18n.localize("MONSTERHEARTS.Settings.startup.dialog.imageAlt")}">
+          </div>
+          <p style="font-size: 0.9em; color: #666; font-style: italic;">
+            ${game.i18n.localize("MONSTERHEARTS.Settings.startup.dialog.preview")}
+          </p>
+        </div>
+        <p style="font-weight: bold; margin-bottom: -0.4rem;">${game.i18n.localize("MONSTERHEARTS.Settings.startup.dialog.content.one")}</p>
+        <p style="margin-top: -0.4rem;">${game.i18n.localize("MONSTERHEARTS.Settings.startup.dialog.content.two")}</p>
+      `,
+      rejectClose: false,
+      modal: true,
+      yes: { 
+        callback: callback,
+        label: game.i18n.localize("MONSTERHEARTS.Settings.startup.dialog.yes"),
+        icon: "fas fa-check"
+      },
+      no: {
+        label: game.i18n.localize("MONSTERHEARTS.Settings.startup.dialog.no"),
+        icon: "fas fa-times"
+      }
+    });
+    
+  } else {
+    // Si ce n'est pas le premier démarrage, vérifier si l'image doit être appliquée
+    if (game.settings.get("monsterhearts", "enableLoginImg")) {
+      await applyOrRestoreLoginImage(true);
+    }
+  }
+});
+
 Hooks.once('ready', async function() {
+  // Utilise le paramètre firstTime
+  if (!game.settings.get("monsterhearts", "firstTime")) {
+    return; // Pas le premier lancement, ne pas afficher le journal
+  }
+  
   const journalEntryUuidFrench = "Compendium.monsterhearts.sources-et-credits.JournalEntry.4tyMVpJxQSbXLmvO";
   const journalEntryUuidEnglish = "Compendium.monsterhearts.sources-and-credits.JournalEntry.kgKyp984r139nDwK";
   const delay = 2000;
 
   setTimeout(async () => {
     try {
-      // Check if the language is French or not
+      // Choisir le journal selon la langue
       const journalEntryUuid = game.i18n.lang === 'fr' ? journalEntryUuidFrench : journalEntryUuidEnglish;
       const journalEntry = await fromUuid(journalEntryUuid);
-
+      
       if (journalEntry) {
         journalEntry.sheet.render(true);
+        console.log("Monsterhearts: Journal d'accueil affiché pour le premier lancement");
       } else {
         console.error(`Journal entry with UUID ${journalEntryUuid} not found`);
       }
@@ -352,51 +624,6 @@ Hooks.once('ready', async function() {
       console.error(`Error fetching journal entry: ${error}`);
     }
   }, delay);
-});
-
-Hooks.on("renderSettings", (app, html) => {
-  const links = {
-    shop: {
-      title: game.i18n.localize(`MONSTERHEARTS.Links.ShopTitle`),
-      url: game.i18n.localize(`MONSTERHEARTS.Links.ShopURL`),
-      iconClass: "fa-solid fa-cart-shopping"
-    },
-    git: {
-      title: game.i18n.localize(`MONSTERHEARTS.Links.GitTitle`),
-      url: game.i18n.localize(`MONSTERHEARTS.Links.GitURL`),
-      iconClass: "fab fa-github"
-    },
-    donation: {
-      title: game.i18n.localize(`MONSTERHEARTS.Links.DonationTitle`),
-      url: game.i18n.localize(`MONSTERHEARTS.Links.DonationURL`),
-      iconClass: "fa-regular fa-mug-hot fa-bounce"
-    }
-  };
-
-  const createButton = (text, iconClass, url) => {
-    const button = $(`<button><i class="${iconClass}"></i> ${text}</button>`);
-    button.on("click", ev => {
-      ev.preventDefault();
-      window.open(url, "_blank");
-    });
-    return button;
-  };
-
-  const addLinkButton = (container, link) => {
-    const button = createButton(link.title, link.iconClass, link.url);
-    container.append(button);
-  };
-
-  const title = game.i18n.localize(`MONSTERHEARTS.Links.Title`);
-  const lotdSection = $(`<h2>${title} <i class="fa-light fa-up-right-from-square"></i></h2>`);
-  html.find("#settings-game").after(lotdSection);
-
-  const lotdDiv = $(`<div></div>`);
-  lotdSection.after(lotdDiv);
-
-  Object.values(links).forEach(link => {
-    addLinkButton(lotdDiv, link);
-  });
 });
 
 Hooks.once('pbtaSheetConfig', () => {
@@ -584,3 +811,5 @@ Hooks.once('pbtaSheetConfig', () => {
     }
   };
 });
+
+

@@ -2,6 +2,12 @@
 
 **See below for the English version**
 
+## 📸 Screenshots
+
+| Interface principale | Feuille de personnage | Système de jeu | Compendiums |
+|:---:|:---:|:---:|:---:|
+| ![Screenshot 1](https://github.com/user-attachments/assets/69eb895e-4d72-449c-8211-42f0b19d12f6) | ![Screenshot 2](https://github.com/user-attachments/assets/3ac69520-1b94-44bd-b61a-1b9301578334) | ![Screenshot 3](https://github.com/user-attachments/assets/6281ef89-896d-40ba-ad58-5bd68cbf40c8) | ![Screenshot 4](https://github.com/user-attachments/assets/04d5a3c1-cf4f-4d3d-baaa-42af97349747) |
+
 <img width="1919" height="1051" alt="Capture d'écran 2025-08-01 150055" src="https://github.com/user-attachments/assets/69eb895e-4d72-449c-8211-42f0b19d12f6" />
 <img width="1919" height="1005" alt="Capture d'écran 2025-08-01 151611" src="https://github.com/user-attachments/assets/3ac69520-1b94-44bd-b61a-1b9301578334" />
 <img width="1914" height="1001" alt="Capture d'écran 2025-08-01 100214" src="https://github.com/user-attachments/assets/6281ef89-896d-40ba-ad58-5bd68cbf40c8" />

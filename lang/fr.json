@@ -14,7 +14,7 @@
   },
   "MONSTERHEARTS": {
     "Links": {
-      "Title": "Monsterhearts · Liens",
+      "Title": "Jeu Propulsé",
       "ShopTitle": "Lapin Marteau",
       "ShopURL": "https://www.lapinmarteau.com/shop/22-monsterhearts",
       "GitTitle": "Dépôt du module",
@@ -87,6 +87,29 @@
       "Cancel": "Annuler",
       "GeneratedGroup": "Groupe généré :",
       "CompendiumNotFound": "Compendium non trouvé :"
+    },
+    "Settings": {
+      "firstTime": {
+        "name": "Premier démarrage",
+        "hint": "Indique si c'est le premier démarrage du module"
+      },
+      "enableLoginImg": {
+        "name": "Image de connexion personnalisée",
+        "hint": "Active l'image de fond personnalisée Monsterhearts sur l'écran de connexion"
+      },
+      "startup": {
+        "dialog": {
+          "title": "Configuration de l'image de connexion Monsterhearts",
+          "content": {
+            "one": "Voulez-vous activer l'image de fond personnalisée Monsterhearts sur l'écran de connexion ?",
+            "two": "Cette option peut être modifiée plus tard dans les paramètres du module."
+          },
+          "preview": "Aperçu de l'image de connexion",
+          "imageAlt": "Aperçu de l'image de connexion Monsterhearts",
+          "yes": "Oui, activer",
+          "no": "Non, merci"
+        }
+      }
     }
   }
 }

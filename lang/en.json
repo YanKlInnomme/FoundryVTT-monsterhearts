@@ -11,7 +11,7 @@
   },
   "MONSTERHEARTS": {
     "Links": {
-      "Title": "Monsterhearts · Links",
+      "Title": "Powered Game",
       "ShopTitle": "Buried Without Ceremony",
       "ShopURL": "https://store.buriedwithoutceremony.com/",
       "GitTitle": "Module deposit",
@@ -84,6 +84,29 @@
       "Cancel": "Cancel",
       "GeneratedGroup": "Group generated :",
       "CompendiumNotFound": "Compendium not found :"
+    },
+    "Settings": {
+      "firstTime": {
+        "name": "First Time Setup",
+        "hint": "Indicates if this is the first time launching the module"
+      },
+      "enableLoginImg": {
+        "name": "Custom Login Image",
+        "hint": "Enables the custom Monsterhearts background image on the login screen"
+      },
+      "startup": {
+        "dialog": {
+          "title": "Monsterhearts Login Image Setup",
+          "content": {
+            "one": "Would you like to enable the custom Monsterhearts background image on the login screen?",
+            "two": "This option can be changed later in the module settings."
+          },
+          "preview": "Login image preview",
+          "imageAlt": "Monsterhearts login image preview",
+          "yes": "Yes, enable it",
+          "no": "No, thanks"
+        }
+      }
     }
   }
 }
