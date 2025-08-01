@@ -2,55 +2,31 @@
 
 **See below for the English version**
 
-<div align="center">
-<!-- Carrousel avec animations hover -->
-<div style="display: flex; overflow-x: auto; gap: 15px; padding: 20px; border-radius: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin: 20px 0;">
-  <div style="flex: 0 0 300px; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <img src="https://github.com/user-attachments/assets/69eb895e-4d72-449c-8211-42f0b19d12f6" alt="Interface principale" style="width: 100%; height: 180px; object-fit: cover; transition: transform 0.3s ease;" />
-    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; padding: 15px; font-size: 14px; font-weight: bold;">
-      🖥️ Interface principale
-    </div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px; background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4); background-size: 400% 400%; animation: gradient 15s ease infinite; border-radius: 15px; margin: 20px 0;">
+  <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 10px; overflow: hidden; transform: perspective(1000px) rotateX(5deg); transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.2);">
+    <img src="https://github.com/user-attachments/assets/69eb895e-4d72-449c-8211-42f0b19d12f6" alt="Interface" style="width: 100%; height: 150px; object-fit: cover;" />
+    <div style="padding: 15px; color: white; font-weight: bold; text-align: center;">Interface principale</div>
   </div>
-  <div style="flex: 0 0 300px; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <img src="https://github.com/user-attachments/assets/3ac69520-1b94-44bd-b61a-1b9301578334" alt="Feuille de personnage" style="width: 100%; height: 180px; object-fit: cover; transition: transform 0.3s ease;" />
-    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; padding: 15px; font-size: 14px; font-weight: bold;">
-      📋 Feuille de personnage
-    </div>
+  <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 10px; overflow: hidden; transform: perspective(1000px) rotateX(5deg); transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.2);">
+    <img src="https://github.com/user-attachments/assets/3ac69520-1b94-44bd-b61a-1b9301578334" alt="Feuille" style="width: 100%; height: 150px; object-fit: cover;" />
+    <div style="padding: 15px; color: white; font-weight: bold; text-align: center;">Feuille de personnage</div>
   </div>
-  <div style="flex: 0 0 300px; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <img src="https://github.com/user-attachments/assets/6281ef89-896d-40ba-ad58-5bd68cbf40c8" alt="Système de jeu" style="width: 100%; height: 180px; object-fit: cover; transition: transform 0.3s ease;" />
-    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; padding: 15px; font-size: 14px; font-weight: bold;">
-      ⚙️ Système de jeu
-    </div>
+  <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 10px; overflow: hidden; transform: perspective(1000px) rotateX(5deg); transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.2);">
+    <img src="https://github.com/user-attachments/assets/6281ef89-896d-40ba-ad58-5bd68cbf40c8" alt="Système" style="width: 100%; height: 150px; object-fit: cover;" />
+    <div style="padding: 15px; color: white; font-weight: bold; text-align: center;">Système de jeu</div>
   </div>
-  <div style="flex: 0 0 300px; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <img src="https://github.com/user-attachments/assets/04d5a3c1-cf4f-4d3d-baaa-42af97349747" alt="Compendiums" style="width: 100%; height: 180px; object-fit: cover; transition: transform 0.3s ease;" />
-    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; padding: 15px; font-size: 14px; font-weight: bold;">
-      📚 Compendiums
-    </div>
-  </div>
-  <div style="flex: 0 0 300px; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <img src="https://github.com/user-attachments/assets/365641b0-4d0b-4979-b889-7addc666bbcd" alt="Actions et mouvements" style="width: 100%; height: 180px; object-fit: cover; transition: transform 0.3s ease;" />
-    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; padding: 15px; font-size: 14px; font-weight: bold;">
-      🎯 Actions et mouvements
-    </div>
-  </div>
-  <div style="flex: 0 0 300px; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <img src="https://github.com/user-attachments/assets/bbab7940-eb9d-44ed-8e12-18f96381caf5" alt="Interface de jeu" style="width: 100%; height: 180px; object-fit: cover; transition: transform 0.3s ease;" />
-    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; padding: 15px; font-size: 14px; font-weight: bold;">
-      🎲 Interface de jeu
-    </div>
-  </div>
-  <div style="flex: 0 0 300px; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-    <img src="https://github.com/user-attachments/assets/4e3a032c-5fc4-4edf-acb1-b20fd0cc43fb" alt="Outils et macros" style="width: 100%; height: 180px; object-fit: cover; transition: transform 0.3s ease;" />
-    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; padding: 15px; font-size: 14px; font-weight: bold;">
-      🔧 Outils et macros
-    </div>
+  <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 10px; overflow: hidden; transform: perspective(1000px) rotateX(5deg); transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.2);">
+    <img src="https://github.com/user-attachments/assets/04d5a3c1-cf4f-4d3d-baaa-42af97349747" alt="Compendiums" style="width: 100%; height: 150px; object-fit: cover;" />
+    <div style="padding: 15px; color: white; font-weight: bold; text-align: center;">Compendiums</div>
   </div>
 </div>
-<p style="margin-top: 10px; color: #666; font-style: italic;">
-  ↔️ Faites défiler horizontalement pour voir toutes les captures
-</p>
+<style>
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+</style>
 </div>
 
 | Interface principale | Feuille de personnage | Système de jeu | Compendiums |
