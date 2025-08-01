@@ -2,17 +2,18 @@
 
 **See below for the English version**
 
+<img width="1919" height="1051" alt="Capture d'écran 2025-08-01 150055" src="https://github.com/user-attachments/assets/69eb895e-4d72-449c-8211-42f0b19d12f6" />
+<img width="1919" height="1005" alt="Capture d'écran 2025-08-01 151611" src="https://github.com/user-attachments/assets/3ac69520-1b94-44bd-b61a-1b9301578334" />
+<img width="1914" height="1001" alt="Capture d'écran 2025-08-01 100214" src="https://github.com/user-attachments/assets/6281ef89-896d-40ba-ad58-5bd68cbf40c8" />
+<img width="1919" height="1004" alt="Capture d'écran 2025-08-01 150454" src="https://github.com/user-attachments/assets/04d5a3c1-cf4f-4d3d-baaa-42af97349747" />
+<img width="1919" height="1006" alt="Capture d'écran 2025-08-01 151953" src="https://github.com/user-attachments/assets/365641b0-4d0b-4979-b889-7addc666bbcd" />
+<img width="1919" height="1006" alt="Capture d'écran 2025-08-01 150629" src="https://github.com/user-attachments/assets/bbab7940-eb9d-44ed-8e12-18f96381caf5" />
+<img width="1919" height="1005" alt="Capture d'écran 2025-08-01 150812" src="https://github.com/user-attachments/assets/4e3a032c-5fc4-4edf-acb1-b20fd0cc43fb" />
+
 # Module monsterhearts pour Foundry VTT
 
 Ce module est une adaptation du jeu de rôle Monsterhearts pour Foundry VTT. Il fonctionne de paire avec le système Powered by the Apocalypse d'Asacolips.
 
-![Capture d'écran 2024-10-15 171355](https://github.com/user-attachments/assets/d43653cd-458e-45ad-adec-8e881e51872b)
-![Capture d'écran 2024-10-08 144719](https://github.com/user-attachments/assets/8e20b1ca-a513-4617-b062-9bea8ad25abf)
-![Capture d'écran 2024-10-15 172355](https://github.com/user-attachments/assets/56717dd4-8409-4344-8af6-bae308fa99c4)
-![Capture d'écran 2024-10-10 094913](https://github.com/user-attachments/assets/54ad5904-6f12-4c4b-b0a1-afd3bfeab2ee)
-![Capture d'écran 2024-10-08 145319](https://github.com/user-attachments/assets/a6d772de-28fa-4a0b-8eb8-9d90a9372c50)
-
-https://tube.portes-imaginaire.org/w/pX2TefKTS7mAKjxWqK4VuX
 
 Si vous appréciez le module et que vous avez les moyens de le faire, vous pouvez me soutenir en m'offrant un café sur Buy Me a Coffee (https://www.buymeacoffee.com/yank). Votre geste sera grandement apprécié et contribuera à soutenir le développement continu. Quoi qu'il en soit, je vous souhaite une expérience enrichissante et divertissante. N'hésitez pas à me contacter pour partager vos commentaires ou signaler tout problème éventuel.
 
